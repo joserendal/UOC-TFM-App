@@ -27,7 +27,7 @@ class Credentials {
     
     var jsonRepresentation : Data {
         let dict = ["email" : email, "password" : password]
-        return try! JSONSerialization.data(withJSONObject: dict, options: [])
+        return try! JSONSerialization.data(withJSONObject: dict, options: .prettyPrinted)
     }
     
 }

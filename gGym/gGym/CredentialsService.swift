@@ -23,20 +23,20 @@ class CredentialsService {
         request.timeoutInterval = 30
         // Request headers
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.addValue("application/json", forHTTPHeaderField: "Accept")
         // Request body
         request.httpBody = credentials.jsonRepresentation
+        
         // Send request
         let dataTask = URLSession.shared.dataTask(with: request as URLRequest, completionHandler: {(data, response, error) in
             // Get the HTTP Response
             let httpResponse = response as? HTTPURLResponse
-            let receivedData = data
             // Return true or false
             if httpResponse?.statusCode == 200{
                 result = true
+            } else {
+                result = false
             }
             // End semaphore
-            result = false
             semaphore.signal()
         });
         // Execute and wait
