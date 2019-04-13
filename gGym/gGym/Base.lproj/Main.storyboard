@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="17G6030" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Iniciar sesión en gGym-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="Iniciar sesión en gGym" id="BYZ-38-t0r" customClass="LoginViewController" customModule="gGym" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gGym Grande" translatesAutoresizingMaskIntoConstraints="NO" id="xew-dt-IUf">
+                                <rect key="frame" x="117" y="207.66666666666669" width="180" height="130.00000000000006"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="Ige-7d-Ktq"/>
+                                    <constraint firstAttribute="width" constant="180" id="n33-BD-iZV"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Iniciar sesión en gGym" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpv-Ue-fUT">
+                                <rect key="frame" x="120.66666666666669" y="357.66666666666669" width="173" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KUh-TQ-3Dl">
+                                <rect key="frame" x="107.33333333333331" y="443.66666666666669" width="200" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="2Th-Ac-SwV"/>
+                                    <constraint firstAttribute="height" constant="25" id="hvA-HT-fWK"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9la-Lr-Zta">
+                                <rect key="frame" x="107.33333333333331" y="488.66666666666663" width="200" height="29.999999999999886"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="2dB-47-cVg"/>
+                                </constraints>
+                                <state key="normal" title="Iniciar Sesión"/>
+                                <connections>
+                                    <action selector="loginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UQS-Ug-LCW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P1P-9d-lKG">
+                                <rect key="frame" x="107" y="528.66666666666663" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="sBa-pt-njf"/>
+                                </constraints>
+                                <state key="normal" title="Crear una cuenta">
+                                    <color key="titleColor" red="1" green="0.14236066780000001" blue="0.082741251700000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="createAccountTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V7L-MY-VGX"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Email" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="JJE-c9-891">
+                                <rect key="frame" x="107" y="398.66666666666669" width="200" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="qMg-sk-OPK"/>
+                                    <constraint firstAttribute="width" constant="200" id="rNa-l9-gse"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9la-Lr-Zta" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2NI-H8-Jno"/>
+                            <constraint firstItem="KUh-TQ-3Dl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9a4-0p-Kds"/>
+                            <constraint firstItem="JJE-c9-891" firstAttribute="top" secondItem="hpv-Ue-fUT" secondAttribute="bottom" constant="20" id="Bcc-aM-RNg"/>
+                            <constraint firstItem="hpv-Ue-fUT" firstAttribute="top" secondItem="xew-dt-IUf" secondAttribute="bottom" constant="20" id="CMg-wM-YwK"/>
+                            <constraint firstItem="P1P-9d-lKG" firstAttribute="top" secondItem="9la-Lr-Zta" secondAttribute="bottom" constant="10" id="De4-hO-lhg"/>
+                            <constraint firstItem="hpv-Ue-fUT" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="FPm-tT-5xt"/>
+                            <constraint firstItem="hpv-Ue-fUT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FQu-kl-t8T"/>
+                            <constraint firstItem="P1P-9d-lKG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OIa-0b-VO7"/>
+                            <constraint firstItem="KUh-TQ-3Dl" firstAttribute="top" secondItem="JJE-c9-891" secondAttribute="bottom" constant="20" id="OkK-R3-pO9"/>
+                            <constraint firstItem="JJE-c9-891" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TQl-l4-WT2"/>
+                            <constraint firstItem="9la-Lr-Zta" firstAttribute="top" secondItem="KUh-TQ-3Dl" secondAttribute="bottom" constant="20" id="Vd6-Qx-IKi"/>
+                            <constraint firstItem="xew-dt-IUf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vpS-QU-fC7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="passwordField" destination="KUh-TQ-3Dl" id="O1l-DM-HHu"/>
+                        <outlet property="usernameField" destination="JJE-c9-891" id="3RZ-dE-80j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="40.799999999999997" y="42.728635682158924"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="gGym Grande" width="297" height="201"/>
+    </resources>
+</document>
