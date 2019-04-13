@@ -19,11 +19,6 @@ class LoginViewController: UIViewController {
         usernameField.text = nil
         passwordField.text = nil
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     @IBAction func loginTapped(_ sender: UIButton) {
         // Get the username and password introduced by the user
@@ -52,12 +47,6 @@ class LoginViewController: UIViewController {
             return
         }
     }
-    
-    @IBAction func createAccountTapped(_ sender: UIButton) {
-        
-    }
-
-
 
 }
 

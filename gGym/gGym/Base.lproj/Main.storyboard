@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="17G6030" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="17G6030" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="8uA-IX-6Eq">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Iniciar sesión en gGym-->
+        <!--gGym Login-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Iniciar sesión en gGym" id="BYZ-38-t0r" customClass="LoginViewController" customModule="gGym" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Iniciar sesión en gGym" id="BYZ-38-t0r" userLabel="gGym Login" customClass="LoginViewController" customModule="gGym" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -52,6 +52,7 @@
                                 <state key="normal" title="Iniciar Sesión"/>
                                 <connections>
                                     <action selector="loginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UQS-Ug-LCW"/>
+                                    <segue destination="VhE-t2-Cqd" kind="show" id="9Hs-Nd-7Ad"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P1P-9d-lKG">
@@ -63,7 +64,7 @@
                                     <color key="titleColor" red="1" green="0.14236066780000001" blue="0.082741251700000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="createAccountTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V7L-MY-VGX"/>
+                                    <segue destination="0hF-0d-pEQ" kind="show" id="1fk-DZ-4NK"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Email" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="JJE-c9-891">
@@ -93,6 +94,7 @@
                             <constraint firstItem="xew-dt-IUf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vpS-QU-fC7"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="FDS-aQ-iij"/>
                     <connections>
                         <outlet property="passwordField" destination="KUh-TQ-3Dl" id="O1l-DM-HHu"/>
                         <outlet property="usernameField" destination="JJE-c9-891" id="3RZ-dE-80j"/>
@@ -100,10 +102,128 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="40.799999999999997" y="42.728635682158924"/>
+            <point key="canvasLocation" x="1781.1594202898552" y="1.6304347826086958"/>
+        </scene>
+        <!--Datos del centro-->
+        <scene sceneID="2KG-n6-K2Q">
+            <objects>
+                <viewController id="i5G-Y4-K8O" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="u3I-mq-1o6"/>
+                        <viewControllerLayoutGuide type="bottom" id="9Gn-eH-mDT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CNX-ww-euk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Datos del centro" image="press-de-banca" id="R7V-h8-1zJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cvc-ml-14t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3593" y="15"/>
+        </scene>
+        <!--Datos personales-->
+        <scene sceneID="AxA-WR-B2a">
+            <objects>
+                <viewController id="DhM-cg-JcS" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="shg-SR-fvO"/>
+                        <viewControllerLayoutGuide type="bottom" id="S6z-xU-wkK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="erf-75-Igp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Datos personales" image="usuario-masculino-forma-negra" id="ehH-VP-HW4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pf2-v3-yDs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3594" y="-735"/>
+        </scene>
+        <!--Account Creation View Controller-->
+        <scene sceneID="iTH-CM-bsD">
+            <objects>
+                <tabBarController id="0hF-0d-pEQ" customClass="AccountCreationViewController" customModule="gGym" customModuleProvider="target" sceneMemberID="viewController">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="tIA-Ky-c26">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="DhM-cg-JcS" kind="relationship" relationship="viewControllers" id="zcG-ZY-eQ3"/>
+                        <segue destination="i5G-Y4-K8O" kind="relationship" relationship="viewControllers" id="j7h-fR-aTs"/>
+                        <segue destination="q7E-dM-1pH" kind="relationship" relationship="viewControllers" id="dqs-S6-taF"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zhL-lw-aRK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2832" y="-294"/>
+        </scene>
+        <!--Main Menu View Controller-->
+        <scene sceneID="07v-Xq-Ruz">
+            <objects>
+                <viewController id="VhE-t2-Cqd" customClass="MainMenuViewController" customModule="gGym" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2Ks-we-eC6"/>
+                        <viewControllerLayoutGuide type="bottom" id="LBA-j7-nc5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="a2K-mq-EcK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6dO-KV-Nfk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2755" y="534"/>
+        </scene>
+        <!--Su cuenta-->
+        <scene sceneID="1Q7-BS-xBd">
+            <objects>
+                <viewController id="q7E-dM-1pH" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nIA-kh-vm6"/>
+                        <viewControllerLayoutGuide type="bottom" id="2vU-iT-F2U"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QqL-iY-6mA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Su cuenta" image="candado" id="l1z-zf-lM7"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZJb-GB-Q74" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3593" y="699"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Bqv-Di-jQf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8uA-IX-6Eq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PDd-xq-jak">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Bq0-Lg-J1E"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i2v-eq-jH1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="873.91304347826099" y="1.6304347826086958"/>
         </scene>
     </scenes>
     <resources>
+        <image name="candado" width="16" height="16"/>
         <image name="gGym Grande" width="297" height="201"/>
+        <image name="press-de-banca" width="16" height="16"/>
+        <image name="usuario-masculino-forma-negra" width="16" height="16"/>
     </resources>
 </document>
