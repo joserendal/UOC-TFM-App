@@ -192,9 +192,9 @@
                                                 <rect key="frame" x="0.0" y="407.66666666666663" width="374" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Provinica" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A6V-dZ-kG6">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Provinicia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A6V-dZ-kG6">
                                                 <rect key="frame" x="0.0" y="437.66666666666663" width="374" height="20.333333333333371"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -344,7 +344,7 @@
                                                 <rect key="frame" x="0.0" y="508.33333333333337" width="374" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Es un centro público?  (*)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4GY-Z8-gVo" userLabel="Centro público">
                                                 <rect key="frame" x="0.0" y="538.33333333333337" width="374" height="20.333333333333258"/>
@@ -449,7 +449,7 @@
                                                 <rect key="frame" x="0.0" y="20.333333333333343" width="374" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contraseña" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OG1-2c-eO0" userLabel="Contraseña">
                                                 <rect key="frame" x="0.0" y="50.333333333333343" width="374" height="20.333333333333314"/>
@@ -542,12 +542,21 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="bornDateField" destination="L63-54-p2Y" id="bns-fd-VaV"/>
+                        <outlet property="centerAddressField" destination="983-RY-GQe" id="4gl-kQ-7hZ"/>
+                        <outlet property="centerCityField" destination="M5j-BL-fmy" id="dMl-7K-AUN"/>
+                        <outlet property="centerCountryField" destination="GEa-MQ-aQE" id="PDG-zI-sc0"/>
                         <outlet property="centerDataViewContainer" destination="5he-Bk-Jew" id="b97-4X-aw2"/>
-                        <outlet property="centerTypeField" destination="Vpf-wb-rBL" id="lq0-8d-Ooc"/>
+                        <outlet property="centerEmailField" destination="ZRN-RI-efT" id="qRX-do-eVN"/>
+                        <outlet property="centerNameField" destination="xzN-Pd-trW" id="LJS-9E-moJ"/>
+                        <outlet property="centerPhoneNumberField" destination="1Ls-0b-IkH" id="RTF-Ki-fLs"/>
+                        <outlet property="centerProvinceField" destination="moa-7w-9tX" id="h4A-Gl-9dW"/>
+                        <outlet property="centerTypeField" destination="Vpf-wb-rBL" id="AAV-3l-0oo"/>
+                        <outlet property="centerZipCodeField" destination="d1x-5D-74t" id="PjC-GN-atm"/>
                         <outlet property="cityField" destination="k5t-rI-4Ry" id="Le3-a1-0ui"/>
                         <outlet property="nameField" destination="lRT-bf-VcZ" id="8Sx-AT-UWg"/>
                         <outlet property="personalDataViewContainer" destination="19V-Zo-N1x" id="Efq-yg-yhn"/>
                         <outlet property="provinceField" destination="Lxg-om-yDH" id="gXf-el-Jlt"/>
+                        <outlet property="publicCenterField" destination="RUd-XK-iFD" id="HKl-Vy-6UE"/>
                         <outlet property="stateField" destination="Xu0-D4-zJ9" id="1UO-ep-zW6"/>
                         <outlet property="surnameField" destination="dRg-Ae-4f4" id="eRG-42-avf"/>
                         <outlet property="userAccountView" destination="HaL-q9-z2R" id="XdZ-8y-Qdt"/>

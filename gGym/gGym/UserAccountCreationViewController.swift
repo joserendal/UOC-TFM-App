@@ -10,6 +10,9 @@ import UIKit
 
 class UserAccountCreationViewController : UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
+    // Progressbar
+    let progressBar = DialogHelper(text: "Enviando datos, espere por favor...")
+    
     // UIViewController - Segment and Views
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var personalDataViewContainer: UIView!
@@ -59,9 +62,12 @@ class UserAccountCreationViewController : UIViewController, UIPickerViewDelegate
     // Configure view once it has appeared
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        // Clean delegate
         centerTypeField.delegate = self
         centerTypeField.dataSource = self
+        // Append loading dialog
+        progressBar.hide()
+        self.view.addSubview(progressBar)
     }
     
     // Number of picker views in the view
@@ -107,10 +113,59 @@ class UserAccountCreationViewController : UIViewController, UIPickerViewDelegate
     // ---- ACTIONS ----
     // Action 1. Create account
     @IBAction func createButtonTapped(_ sender: Any) {
+        // Show loading dialog
+        progressBar.show()
         // If form doesn't get validated, return
         if !validateForm() {
+            progressBar.hide()
             return
         }
+        // Create the user object
+        var user = User(nombre: nameField.text!, apellidos: surnameField.text!, fechaNacimiento: bornDateField.date, pais: stateField.text!)
+        if(zipCodeFeld != nil) {
+            user?.codigoPostal = Int(zipCodeFeld.text!)!
+        }
+        if(cityField != nil) {
+            user?.ciudad = cityField.text!
+        }
+        if(provinceField != nil) {
+            user?.provincia = provinceField.text!
+        }
+        // Call the user API
+        user = UsuariosService.createUser(user: user)
+        // Check if there was an error creating the user
+        if(user?.idUsuario == 0) {
+            DialogHelper.displayErrorDialogWithoutAction(title: "Error", message: "Hubo un error creando sus credenciales. Intentelo de nuevo mas tarde.", button: "Cerrar", callerController: self)
+            progressBar.hide()
+            return
+        }
+        // Create credentials object
+        var credentials = Credentials(idUsuario: (user?.idUsuario)!, email: userEmailField.text!, password: userPassword1Field.text!)
+        credentials = CredentialsService.createCredentials(credentials: credentials)
+        // Check if there was an error creating the credentials
+        if(credentials?.idUsuario == 0) {
+            DialogHelper.displayErrorDialogWithoutAction(title: "Error", message: "Hubo un error creando sus credenciales. Intentelo de nuevo mas tarde.", button: "Cerrar", callerController: self)
+            progressBar.hide()
+            return
+        }
+        // Create center object
+        var center = Center(idGestor: (user?.idUsuario)!, nombreCentro: centerNameField.text!, tipoCentro: centerTypes[centerTypeField.selectedRow(inComponent: 0)], direccion: centerAddressField.text!, ciudad: centerCityField.text!, provincia: centerProvinceField.text!, pais: centerCountryField.text!, codigoPostal: centerZipCodeField.text!, privado: !publicCenterField.isOn, numeroTelefono: centerPhoneNumberField.text!, emailContacto: centerEmailField.text!)
+        center = CenterService.createCenters(center: center, idUsuario: 2)
+        if(center?.idCentro == 0) {
+            DialogHelper.displayErrorDialogWithoutAction(title: "Error", message: "Hubo un error creando su usuario. Intentelo de nuevo mas tarde.", button: "Cerrar", callerController: self)
+            progressBar.hide()
+            return
+        }
+        // Save the credentials object in the database
+        let encodedData = NSKeyedArchiver.archivedData(withRootObject: credentials!)
+        let userDefaults: UserDefaults = UserDefaults.standard
+        userDefaults.set(encodedData, forKey: "credentials")
+        userDefaults.synchronize()
+        // Stop progress bar
+        progressBar.hide()
+        // Hide view
+        self.navigationController?.popViewController(animated: true)
+
     }
     
     // Action 2. Cancel account creation
@@ -141,14 +196,11 @@ class UserAccountCreationViewController : UIViewController, UIPickerViewDelegate
         FormValidator.validateRequiredTextFieldAndDisplayAlert(textField: userEmailField, fieldName: "Email del usuario", callerController: self) &&
         FormValidator.validateRequiredTextFieldAndDisplayAlert(textField: userPassword1Field, fieldName: "Contraseña del usuario", callerController: self) &&
         FormValidator.validateRequiredTextFieldAndDisplayAlert(textField: userPassword2Field, fieldName: "Repetir contraseña del usuario", callerController: self)
-    
-        // 2. Born date is valid
-
         
-        // 3. Email field is valid
+        // 2. Email field is valid
         let emailValidation = FormValidator.validateEmailAddressAndDisplayAlert(textField: userEmailField, callerController: self)
         
-        // 4. Passwords are equal
+        // 3. Passwords are equal
         let passwordsEqual = (userPassword1Field.text == userPassword2Field.text)
         if !passwordsEqual {
             DialogHelper.displayErrorDialogWithoutAction(title: "Error", message: "Las passwords no coinciden", button: "Cerrar", callerController: self)
@@ -156,23 +208,6 @@ class UserAccountCreationViewController : UIViewController, UIPickerViewDelegate
         
         
         // Return validation result
-        return emailValidation && passwordsEqual
-    }
-    
-    func displayValidationError(errorMessage: String) {
-        
-    }
-    
-    func displaySucessMessage() {
-        
-    }
-    
-    
-    func showLoadingDialog() {
-        
-    }
-    
-    func hideLoadingDialog() {
-        
+        return userFieldsValidation && emailValidation && passwordsEqual
     }
 }

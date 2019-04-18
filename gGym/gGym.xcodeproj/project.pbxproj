@@ -21,6 +21,10 @@
 		A1528A012261EFCD008983AE /* Costants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1528A002261EFCD008983AE /* Costants.swift */; };
 		A1695285226251E100F5F377 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1695284226251E100F5F377 /* MainMenuViewController.swift */; };
 		A16952872262673200F5F377 /* UserAccountCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16952862262673200F5F377 /* UserAccountCreationViewController.swift */; };
+		A19266C82268F573004E80A3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19266C72268F573004E80A3 /* User.swift */; };
+		A19266CC2268F990004E80A3 /* UsuariosService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19266CB2268F990004E80A3 /* UsuariosService.swift */; };
+		A19266CE2269034F004E80A3 /* CenterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19266CD2269034F004E80A3 /* CenterService.swift */; };
+		A19266D0226903E3004E80A3 /* Center.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19266CF226903E3004E80A3 /* Center.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +65,10 @@
 		A1528A002261EFCD008983AE /* Costants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Costants.swift; sourceTree = "<group>"; };
 		A1695284226251E100F5F377 /* MainMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 		A16952862262673200F5F377 /* UserAccountCreationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccountCreationViewController.swift; sourceTree = "<group>"; };
+		A19266C72268F573004E80A3 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		A19266CB2268F990004E80A3 /* UsuariosService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsuariosService.swift; sourceTree = "<group>"; };
+		A19266CD2269034F004E80A3 /* CenterService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterService.swift; sourceTree = "<group>"; };
+		A19266CF226903E3004E80A3 /* Center.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Center.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +174,8 @@
 			children = (
 				A15289FB2261ED55008983AE /* Credentials.swift */,
 				A1528A002261EFCD008983AE /* Costants.swift */,
+				A19266C72268F573004E80A3 /* User.swift */,
+				A19266CF226903E3004E80A3 /* Center.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -174,6 +184,8 @@
 			isa = PBXGroup;
 			children = (
 				A15289FD2261EE2D008983AE /* CredentialsService.swift */,
+				A19266CB2268F990004E80A3 /* UsuariosService.swift */,
+				A19266CD2269034F004E80A3 /* CenterService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -318,9 +330,13 @@
 				A16952872262673200F5F377 /* UserAccountCreationViewController.swift in Sources */,
 				A15289C82261DBE5008983AE /* LoginViewController.swift in Sources */,
 				A1695285226251E100F5F377 /* MainMenuViewController.swift in Sources */,
+				A19266CE2269034F004E80A3 /* CenterService.swift in Sources */,
 				A15289FE2261EE2D008983AE /* CredentialsService.swift in Sources */,
+				A19266CC2268F990004E80A3 /* UsuariosService.swift in Sources */,
 				A15289C62261DBE5008983AE /* AppDelegate.swift in Sources */,
+				A19266C82268F573004E80A3 /* User.swift in Sources */,
 				A1528A012261EFCD008983AE /* Costants.swift in Sources */,
+				A19266D0226903E3004E80A3 /* Center.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
