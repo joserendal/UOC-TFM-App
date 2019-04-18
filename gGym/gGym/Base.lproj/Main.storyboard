@@ -259,18 +259,189 @@
                                     <constraint firstItem="4V3-NS-raI" firstAttribute="top" secondItem="19V-Zo-N1x" secondAttribute="top" id="tV1-CV-3q1"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0dL-as-O6m" userLabel="Datos del centro">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5he-Bk-Jew" userLabel="Datos del centro">
                                 <rect key="frame" x="20" y="132" width="374" height="604"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="WgV-Oi-WeD">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="690.33333333333337"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre del centro" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a85-hi-N3c" userLabel="Nombre del centro">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="20.333333333333343"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xzN-Pd-trW" userLabel="Input Nombre del Centro">
+                                                <rect key="frame" x="0.0" y="20.333333333333343" width="374" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tipo de centro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8a3-BM-sde" userLabel="Tipo de centro">
+                                                <rect key="frame" x="0.0" y="50.333333333333343" width="374" height="20.333333333333314"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <pickerView tag="-1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vpf-wb-rBL" userLabel="Picker Tipo de Centro">
+                                                <rect key="frame" x="0.0" y="70.666666666666671" width="374" height="216"/>
+                                            </pickerView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dirección" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WCS-5d-qNW" userLabel="Dirección">
+                                                <rect key="frame" x="0.0" y="286.66666666666674" width="374" height="20.333333333333314"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="983-RY-GQe" userLabel="Input Dirección del Centro">
+                                                <rect key="frame" x="0.0" y="307" width="374" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ciudad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0u-Qd-Jp8" userLabel="Ciudad">
+                                                <rect key="frame" x="0.0" y="337" width="374" height="20.333333333333314"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M5j-BL-fmy" userLabel="Input Ciudad">
+                                                <rect key="frame" x="0.0" y="357.33333333333337" width="374" height="30.000000000000057"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Provincia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sLT-GX-g6M" userLabel="Provincia">
+                                                <rect key="frame" x="0.0" y="387.33333333333337" width="374" height="20.333333333333258"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="moa-7w-9tX" userLabel="Input Provincia">
+                                                <rect key="frame" x="0.0" y="407.66666666666663" width="374" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="País" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z57-gG-32d" userLabel="Pais">
+                                                <rect key="frame" x="0.0" y="437.66666666666663" width="374" height="20.333333333333371"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GEa-MQ-aQE" userLabel="Input País">
+                                                <rect key="frame" x="0.0" y="458" width="374" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Código postal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eww-T3-cdl">
+                                                <rect key="frame" x="0.0" y="488" width="374" height="20.333333333333371"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d1x-5D-74t" userLabel="Input Codigo Postal">
+                                                <rect key="frame" x="0.0" y="508.33333333333337" width="374" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Es un centro público?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4GY-Z8-gVo" userLabel="Centro público">
+                                                <rect key="frame" x="0.0" y="538.33333333333337" width="374" height="20.333333333333258"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RUd-XK-iFD" userLabel="Switch centro público">
+                                                <rect key="frame" x="0.0" y="558.66666666666663" width="376" height="31"/>
+                                            </switch>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Número de teléfono" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BlP-us-Y8j" userLabel="Número de teléfono">
+                                                <rect key="frame" x="0.0" y="589.66666666666652" width="374" height="20.333333333333371"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Ls-0b-IkH" userLabel="Input número de teléfono">
+                                                <rect key="frame" x="0.0" y="610" width="374" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email de contacto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UV7-LT-hlh" userLabel="Email de contacto">
+                                                <rect key="frame" x="0.0" y="640" width="374" height="20.333333333333371"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZRN-RI-efT" userLabel="Input email de contacto">
+                                                <rect key="frame" x="0.0" y="660.33333333333337" width="374" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="983-RY-GQe" firstAttribute="leading" secondItem="WgV-Oi-WeD" secondAttribute="leading" id="02n-7g-uoY"/>
+                                            <constraint firstItem="sLT-GX-g6M" firstAttribute="leading" secondItem="WgV-Oi-WeD" secondAttribute="leading" id="1V8-fb-FEL"/>
+                                            <constraint firstAttribute="trailing" secondItem="eww-T3-cdl" secondAttribute="trailing" id="1vk-Jc-DP5"/>
+                                            <constraint firstItem="Vpf-wb-rBL" firstAttribute="leading" secondItem="WgV-Oi-WeD" secondAttribute="leading" id="3hI-XB-v1l"/>
+                                            <constraint firstItem="a85-hi-N3c" firstAttribute="leading" secondItem="WgV-Oi-WeD" secondAttribute="leading" id="6QX-fu-FNQ"/>
+                                            <constraint firstAttribute="trailing" secondItem="GEa-MQ-aQE" secondAttribute="trailing" id="6qi-89-Qef"/>
+                                            <constraint firstItem="d1x-5D-74t" firstAttribute="leading" secondItem="WgV-Oi-WeD" secondAttribute="leading" id="86s-fL-w5j"/>
+                                            <constraint firstAttribute="trailing" secondItem="M5j-BL-fmy" secondAttribute="trailing" id="Aye-e0-anC"/>
+                                            <constraint firstItem="BlP-us-Y8j" firstAttribute="leading" secondItem="WgV-Oi-WeD" secondAttribute="leading" id="E5W-VL-ddb"/>
+                                            <constraint firstAttribute="trailing" secondItem="UV7-LT-hlh" secondAttribute="trailing" id="Eei-Bl-agy"/>
+                                            <constraint firstAttribute="trailing" secondItem="sLT-GX-g6M" secondAttribute="trailing" id="FFa-3c-4U1"/>
+                                            <constraint firstAttribute="trailing" secondItem="Vpf-wb-rBL" secondAttribute="trailing" id="FwJ-PK-tni"/>
+                                            <constraint firstItem="ZRN-RI-efT" firstAttribute="leading" secondItem="WgV-Oi-WeD" secondAttribute="leading" id="IP0-m3-uC9"/>
+                                            <constraint firstItem="M5j-BL-fmy" firstAttribute="leading" secondItem="WgV-Oi-WeD" secondAttribute="leading" id="JZK-nA-ptd"/>
+                                            <constraint firstItem="1Ls-0b-IkH" firstAttribute="leading" secondItem="WgV-Oi-WeD" secondAttribute="leading" id="KpV-b7-AEU"/>
+                                            <constraint firstAttribute="trailing" secondItem="z57-gG-32d" secondAttribute="trailing" id="MED-3f-dD5"/>
+                                            <constraint firstAttribute="trailing" secondItem="8a3-BM-sde" secondAttribute="trailing" id="MKI-cy-8cK"/>
+                                            <constraint firstAttribute="trailing" secondItem="4GY-Z8-gVo" secondAttribute="trailing" id="Mie-ur-7XI"/>
+                                            <constraint firstAttribute="trailing" secondItem="V0u-Qd-Jp8" secondAttribute="trailing" id="MjV-23-PiK"/>
+                                            <constraint firstItem="8a3-BM-sde" firstAttribute="leading" secondItem="WgV-Oi-WeD" secondAttribute="leading" id="T8B-H4-ulC"/>
+                                            <constraint firstAttribute="trailing" secondItem="moa-7w-9tX" secondAttribute="trailing" id="TxJ-En-XoP"/>
+                                            <constraint firstAttribute="trailing" secondItem="BlP-us-Y8j" secondAttribute="trailing" id="XYp-fp-V8h"/>
+                                            <constraint firstAttribute="trailing" secondItem="d1x-5D-74t" secondAttribute="trailing" id="ZYF-0n-JJB"/>
+                                            <constraint firstItem="UV7-LT-hlh" firstAttribute="leading" secondItem="WgV-Oi-WeD" secondAttribute="leading" id="bsQ-fU-iTn"/>
+                                            <constraint firstItem="4GY-Z8-gVo" firstAttribute="leading" secondItem="WgV-Oi-WeD" secondAttribute="leading" id="bvp-ei-jIc"/>
+                                            <constraint firstAttribute="trailing" secondItem="1Ls-0b-IkH" secondAttribute="trailing" id="cab-gT-guI"/>
+                                            <constraint firstItem="xzN-Pd-trW" firstAttribute="leading" secondItem="WgV-Oi-WeD" secondAttribute="leading" id="dHE-bv-NLp"/>
+                                            <constraint firstItem="z57-gG-32d" firstAttribute="leading" secondItem="WgV-Oi-WeD" secondAttribute="leading" id="fxf-2y-cvc"/>
+                                            <constraint firstItem="eww-T3-cdl" firstAttribute="leading" secondItem="WgV-Oi-WeD" secondAttribute="leading" id="gJt-g6-Iqh"/>
+                                            <constraint firstAttribute="trailing" secondItem="983-RY-GQe" secondAttribute="trailing" id="hrM-m0-BYq"/>
+                                            <constraint firstAttribute="trailing" secondItem="ZRN-RI-efT" secondAttribute="trailing" id="meQ-0m-OWB"/>
+                                            <constraint firstAttribute="trailing" secondItem="xzN-Pd-trW" secondAttribute="trailing" id="pVF-4P-hSi"/>
+                                            <constraint firstAttribute="trailing" secondItem="a85-hi-N3c" secondAttribute="trailing" id="q40-nk-VYe"/>
+                                            <constraint firstAttribute="trailing" secondItem="WCS-5d-qNW" secondAttribute="trailing" id="qt1-wL-8yz"/>
+                                            <constraint firstItem="GEa-MQ-aQE" firstAttribute="leading" secondItem="WgV-Oi-WeD" secondAttribute="leading" id="tiU-vH-bKS"/>
+                                            <constraint firstAttribute="trailing" secondItem="a85-hi-N3c" secondAttribute="trailing" id="vrE-KN-80n"/>
+                                            <constraint firstItem="V0u-Qd-Jp8" firstAttribute="leading" secondItem="WgV-Oi-WeD" secondAttribute="leading" id="wbU-BM-7rs"/>
+                                            <constraint firstItem="moa-7w-9tX" firstAttribute="leading" secondItem="WgV-Oi-WeD" secondAttribute="leading" id="xz1-fH-Uda"/>
+                                            <constraint firstAttribute="trailing" secondItem="RUd-XK-iFD" secondAttribute="trailing" id="yWS-DJ-naS"/>
+                                            <constraint firstItem="RUd-XK-iFD" firstAttribute="leading" secondItem="WgV-Oi-WeD" secondAttribute="leading" id="zCl-ds-egE"/>
+                                            <constraint firstItem="WCS-5d-qNW" firstAttribute="leading" secondItem="WgV-Oi-WeD" secondAttribute="leading" id="zTK-dx-BeB"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="WgV-Oi-WeD" firstAttribute="top" secondItem="5he-Bk-Jew" secondAttribute="top" id="4l0-Wb-h54"/>
+                                    <constraint firstItem="WgV-Oi-WeD" firstAttribute="leading" secondItem="5he-Bk-Jew" secondAttribute="leading" id="9jg-uK-LqW"/>
+                                    <constraint firstAttribute="trailing" secondItem="WgV-Oi-WeD" secondAttribute="trailing" id="CGX-ey-fVM"/>
+                                    <constraint firstAttribute="bottom" secondItem="WgV-Oi-WeD" secondAttribute="bottom" id="GQn-3G-kpT"/>
+                                    <constraint firstItem="WgV-Oi-WeD" firstAttribute="centerX" secondItem="5he-Bk-Jew" secondAttribute="centerX" id="pMD-PJ-js0"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="5he-Bk-Jew" firstAttribute="top" secondItem="1Q9-4V-AuK" secondAttribute="bottom" constant="10" id="FK1-dL-7nt"/>
                             <constraint firstItem="1Q9-4V-AuK" firstAttribute="trailing" secondItem="kUC-5b-Tze" secondAttribute="trailingMargin" id="JvK-76-nqZ"/>
-                            <constraint firstItem="0dL-as-O6m" firstAttribute="trailing" secondItem="kUC-5b-Tze" secondAttribute="trailingMargin" id="Ngr-EJ-s34"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5he-Bk-Jew" secondAttribute="trailing" id="NV3-LB-g04"/>
                             <constraint firstItem="1Q9-4V-AuK" firstAttribute="leading" secondItem="kUC-5b-Tze" secondAttribute="leadingMargin" id="XZX-ox-B3s"/>
-                            <constraint firstItem="0dL-as-O6m" firstAttribute="top" secondItem="1Q9-4V-AuK" secondAttribute="bottom" constant="10" id="Yd6-df-0YW"/>
-                            <constraint firstItem="0dL-as-O6m" firstAttribute="leading" secondItem="kUC-5b-Tze" secondAttribute="leadingMargin" id="jFC-7e-pEq"/>
+                            <constraint firstItem="sZR-6o-E0m" firstAttribute="top" secondItem="5he-Bk-Jew" secondAttribute="bottom" id="ema-Fv-Zri"/>
+                            <constraint firstItem="5he-Bk-Jew" firstAttribute="leading" secondItem="kUC-5b-Tze" secondAttribute="leadingMargin" id="hvx-0G-qoC"/>
                             <constraint firstItem="19V-Zo-N1x" firstAttribute="top" secondItem="1Q9-4V-AuK" secondAttribute="bottom" constant="10" id="nCk-fF-03s"/>
                             <constraint firstItem="19V-Zo-N1x" firstAttribute="leading" secondItem="kUC-5b-Tze" secondAttribute="leadingMargin" id="op5-te-xjo"/>
                             <constraint firstItem="19V-Zo-N1x" firstAttribute="trailing" secondItem="kUC-5b-Tze" secondAttribute="trailingMargin" id="qHB-vA-VZT"/>
@@ -279,8 +450,16 @@
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
                     <connections>
-                        <outlet property="centerDataViewContainer" destination="0dL-as-O6m" id="uPs-4E-frO"/>
+                        <outlet property="bornDateField" destination="L63-54-p2Y" id="bns-fd-VaV"/>
+                        <outlet property="centerDataViewContainer" destination="5he-Bk-Jew" id="b97-4X-aw2"/>
+                        <outlet property="centerTypeField" destination="Vpf-wb-rBL" id="lq0-8d-Ooc"/>
+                        <outlet property="cityField" destination="k5t-rI-4Ry" id="Le3-a1-0ui"/>
+                        <outlet property="nameField" destination="lRT-bf-VcZ" id="8Sx-AT-UWg"/>
                         <outlet property="personalDataViewContainer" destination="19V-Zo-N1x" id="Efq-yg-yhn"/>
+                        <outlet property="provinceField" destination="Lxg-om-yDH" id="gXf-el-Jlt"/>
+                        <outlet property="stateField" destination="Xu0-D4-zJ9" id="1UO-ep-zW6"/>
+                        <outlet property="surnameField" destination="dRg-Ae-4f4" id="eRG-42-avf"/>
+                        <outlet property="zipCodeFeld" destination="TPm-Bc-ZeW" id="YaB-Bg-j4N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zw9-oQ-H89" userLabel="First Responder" sceneMemberID="firstResponder"/>

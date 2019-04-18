@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UserAccountCreationViewController : UIViewController {
+class UserAccountCreationViewController : UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     // UIViewController - Segment and Views
     @IBOutlet weak var segmentedControl: UISegmentedControl!
@@ -23,12 +23,22 @@ class UserAccountCreationViewController : UIViewController {
     @IBOutlet weak var cityField: UITextField!
     @IBOutlet weak var provinceField: UITextField!
     @IBOutlet weak var stateField: UITextField!
-    // Center data
-    @IBOutlet weak var centerNameField: UITextField!
-    @IBOutlet weak var tipeField: UITextField!
-    @IBOutlet weak var addressField: UITextField!
     
-    // Configure navigation bar
+    // Center data
+    let centerTypes = ["Gimnasio","Polideportivo","Centro de aventura", "Box de Crossfit", "Otros"]
+    @IBOutlet weak var centerNameField: UITextField!
+    @IBOutlet weak var centerTypeField: UIPickerView!
+    @IBOutlet weak var centerAddressField: UITextField!
+    @IBOutlet weak var centerCityField: UITextField!
+    @IBOutlet weak var centerProvinceField: UITextField!
+    @IBOutlet weak var centerCountryField: UITextField!
+    @IBOutlet weak var centerZipCodeField: UITextField!
+    @IBOutlet weak var publicCenterField: UISwitch!
+    @IBOutlet weak var centerPhoneNumberField: UITextField!
+    @IBOutlet weak var centerEmailField: UITextField!
+    
+    // ---- VIEW CONFIGURATION ----
+    // Configure view before appearing
     override func viewWillAppear(_ animated: Bool) {
         // View title
         navigationItem.title = "Crear una cuenta"
@@ -39,10 +49,30 @@ class UserAccountCreationViewController : UIViewController {
         centerDataViewContainer.isHidden = true
     }
     
-    func createButtonTapped() {
-        self.navigationController?.popViewController(animated: true)
+    // Configure view once it has appeared
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        centerTypeField.delegate = self
+        centerTypeField.dataSource = self
     }
     
+    // Number of picker views in the view
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    // Number of options to pick in the picker view
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return centerTypes.count
+    }
+    
+    // Populate center types
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return centerTypes[row]
+    }
+    
+    // ---- VIEW LISTENERS ----
     // User clicks in Segment change
     @IBAction func segmentChanged(_ sender: UISegmentedControl) {
         // Get the index clicked
@@ -56,5 +86,13 @@ class UserAccountCreationViewController : UIViewController {
             personalDataViewContainer.isHidden = false
             centerDataViewContainer.isHidden = true
         }
+    }
+    
+    
+    
+    
+    // ---- ACTIONS ----
+    func createButtonTapped() {
+        self.navigationController?.popViewController(animated: true)
     }
 }
