@@ -14,6 +14,7 @@ class UserAccountCreationViewController : UIViewController, UIPickerViewDelegate
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var personalDataViewContainer: UIView!
     @IBOutlet weak var centerDataViewContainer: UIView!
+    @IBOutlet weak var userAccountView: UIView!
     
     // User data
     @IBOutlet weak var nameField: UITextField!
@@ -37,6 +38,11 @@ class UserAccountCreationViewController : UIViewController, UIPickerViewDelegate
     @IBOutlet weak var centerPhoneNumberField: UITextField!
     @IBOutlet weak var centerEmailField: UITextField!
     
+    // User data
+    @IBOutlet weak var userEmailField: UITextField!
+    @IBOutlet weak var userPassword1Field: UITextField!
+    @IBOutlet weak var userPassword2Field: UITextField!
+    
     // ---- VIEW CONFIGURATION ----
     // Configure view before appearing
     override func viewWillAppear(_ animated: Bool) {
@@ -47,6 +53,7 @@ class UserAccountCreationViewController : UIViewController, UIPickerViewDelegate
         // Segment control initial state
         personalDataViewContainer.isHidden = false
         centerDataViewContainer.isHidden = true
+        userAccountView.isHidden = true
     }
     
     // Configure view once it has appeared
@@ -82,9 +89,15 @@ class UserAccountCreationViewController : UIViewController, UIPickerViewDelegate
         case 1:
             personalDataViewContainer.isHidden = true
             centerDataViewContainer.isHidden = false
+            userAccountView.isHidden = true
+        case 2:
+            personalDataViewContainer.isHidden = true
+            centerDataViewContainer.isHidden = true
+            userAccountView.isHidden = false
         default:
             personalDataViewContainer.isHidden = false
             centerDataViewContainer.isHidden = true
+            userAccountView.isHidden = true
         }
     }
     
@@ -92,7 +105,74 @@ class UserAccountCreationViewController : UIViewController, UIPickerViewDelegate
     
     
     // ---- ACTIONS ----
-    func createButtonTapped() {
+    // Action 1. Create account
+    @IBAction func createButtonTapped(_ sender: Any) {
+        // If form doesn't get validated, return
+        if !validateForm() {
+            return
+        }
+    }
+    
+    // Action 2. Cancel account creation
+    @IBAction func cancelButtonTapped(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    
+    // ---- FUNCTIONS ----
+    // Auxiliary function for validating the form before submitting it
+    func validateForm() -> Bool {
+        // 1. All required fields are present
+        // User data fields
+        let userFieldsValidation =
+        FormValidator.validateRequiredTextFieldAndDisplayAlert(textField: nameField, fieldName: "Nombre del usuario", callerController: self) &&
+        FormValidator.validateRequiredTextFieldAndDisplayAlert(textField: surnameField, fieldName: "Apellidos del usuario", callerController: self) &&
+        FormValidator.validateRequiredTextFieldAndDisplayAlert(textField: stateField, fieldName: "País del usuario", callerController: self) &&
+        // Center data fields
+        FormValidator.validateRequiredTextFieldAndDisplayAlert(textField: centerNameField, fieldName: "Nombre del centro", callerController: self) &&
+        FormValidator.validateRequiredTextFieldAndDisplayAlert(textField: centerAddressField, fieldName: "Dirección del centro", callerController: self) &&
+        FormValidator.validateRequiredTextFieldAndDisplayAlert(textField: centerCityField, fieldName: "Ciudad del centro", callerController: self) &&
+        FormValidator.validateRequiredTextFieldAndDisplayAlert(textField: centerProvinceField, fieldName: "Provincia del centro", callerController: self) &&
+        FormValidator.validateRequiredTextFieldAndDisplayAlert(textField: centerCountryField, fieldName: "País del centro", callerController: self) &&
+        FormValidator.validateRequiredTextFieldAndDisplayAlert(textField: centerZipCodeField, fieldName: "Código postal del centro", callerController: self) &&
+        FormValidator.validateRequiredTextFieldAndDisplayAlert(textField: centerPhoneNumberField, fieldName: "Teléfono del centro", callerController: self) &&
+        FormValidator.validateRequiredTextFieldAndDisplayAlert(textField: centerEmailField, fieldName: "Email del centro", callerController: self) &&
+        // User data
+        FormValidator.validateRequiredTextFieldAndDisplayAlert(textField: userEmailField, fieldName: "Email del usuario", callerController: self) &&
+        FormValidator.validateRequiredTextFieldAndDisplayAlert(textField: userPassword1Field, fieldName: "Contraseña del usuario", callerController: self) &&
+        FormValidator.validateRequiredTextFieldAndDisplayAlert(textField: userPassword2Field, fieldName: "Repetir contraseña del usuario", callerController: self)
+    
+        // 2. Born date is valid
+
+        
+        // 3. Email field is valid
+        let emailValidation = FormValidator.validateEmailAddressAndDisplayAlert(textField: userEmailField, callerController: self)
+        
+        // 4. Passwords are equal
+        let passwordsEqual = (userPassword1Field.text == userPassword2Field.text)
+        if !passwordsEqual {
+            DialogHelper.displayErrorDialogWithoutAction(title: "Error", message: "Las passwords no coinciden", button: "Cerrar", callerController: self)
+        }
+        
+        
+        // Return validation result
+        return emailValidation && passwordsEqual
+    }
+    
+    func displayValidationError(errorMessage: String) {
+        
+    }
+    
+    func displaySucessMessage() {
+        
+    }
+    
+    
+    func showLoadingDialog() {
+        
+    }
+    
+    func hideLoadingDialog() {
+        
     }
 }

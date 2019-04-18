@@ -40,9 +40,11 @@ class LoginViewController: UIViewController {
         // If request was wrong
         if(!success) {
             // Display an error message
-            let alertController = UIAlertController(title: "Error", message: "No se ha podido autenticar en el sistema", preferredStyle: .alert)
+            DialogHelper.displayErrorDialogWithoutAction(title: "Error", message: "No se ha podido autenticar en el sistema", button: "Cerrar", callerController: self)
+            
+            /*let alertController = UIAlertController(title: "Error", message: "No se ha podido autenticar en el sistema", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "Cerrar", style: .default))
-            self.present(alertController, animated: true, completion: nil)
+            self.present(alertController, animated: true, completion: nil)*/
             // End the execution of the action
             return
         }

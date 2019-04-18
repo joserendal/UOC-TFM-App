@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A13C156522688A0200594668 /* FormValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13C156422688A0200594668 /* FormValidator.swift */; };
+		A13C156722688C3D00594668 /* DialogHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13C156622688C3D00594668 /* DialogHelper.swift */; };
 		A15289C62261DBE5008983AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15289C52261DBE5008983AE /* AppDelegate.swift */; };
 		A15289C82261DBE5008983AE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15289C72261DBE5008983AE /* LoginViewController.swift */; };
 		A15289CB2261DBE5008983AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A15289C92261DBE5008983AE /* Main.storyboard */; };
@@ -39,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A13C156422688A0200594668 /* FormValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormValidator.swift; sourceTree = "<group>"; };
+		A13C156622688C3D00594668 /* DialogHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogHelper.swift; sourceTree = "<group>"; };
 		A15289C22261DBE5008983AE /* gGym.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gGym.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A15289C52261DBE5008983AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A15289C72261DBE5008983AE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +88,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A13C1563226889E900594668 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A13C156422688A0200594668 /* FormValidator.swift */,
+				A13C156622688C3D00594668 /* DialogHelper.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
 		A15289B92261DBE5008983AE = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +120,7 @@
 		A15289C42261DBE5008983AE /* gGym */ = {
 			isa = PBXGroup;
 			children = (
+				A13C1563226889E900594668 /* Utilities */,
 				A15289F72261ECCA008983AE /* Services */,
 				A15289F62261ECC5008983AE /* Model */,
 				A15289F32261DC0F008983AE /* Controllers */,
@@ -298,7 +312,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A13C156522688A0200594668 /* FormValidator.swift in Sources */,
 				A15289FC2261ED55008983AE /* Credentials.swift in Sources */,
+				A13C156722688C3D00594668 /* DialogHelper.swift in Sources */,
 				A16952872262673200F5F377 /* UserAccountCreationViewController.swift in Sources */,
 				A15289C82261DBE5008983AE /* LoginViewController.swift in Sources */,
 				A1695285226251E100F5F377 /* MainMenuViewController.swift in Sources */,
