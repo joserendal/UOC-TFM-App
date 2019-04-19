@@ -11,7 +11,7 @@ import UIKit
 class UserAccountCreationViewController : UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     // Progressbar
-    let progressBar = DialogHelper(text: "Enviando datos, espere por favor...")
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     // UIViewController - Segment and Views
     @IBOutlet weak var segmentedControl: UISegmentedControl!
@@ -65,9 +65,6 @@ class UserAccountCreationViewController : UIViewController, UIPickerViewDelegate
         // Clean delegate
         centerTypeField.delegate = self
         centerTypeField.dataSource = self
-        // Append loading dialog
-        progressBar.hide()
-        self.view.addSubview(progressBar)
     }
     
     // Number of picker views in the view
@@ -114,10 +111,10 @@ class UserAccountCreationViewController : UIViewController, UIPickerViewDelegate
     // Action 1. Create account
     @IBAction func createButtonTapped(_ sender: Any) {
         // Show loading dialog
-        progressBar.show()
+        activityIndicator.startAnimating()
         // If form doesn't get validated, return
         if !validateForm() {
-            progressBar.hide()
+            activityIndicator.stopAnimating()
             return
         }
         // Create the user object
@@ -136,7 +133,7 @@ class UserAccountCreationViewController : UIViewController, UIPickerViewDelegate
         // Check if there was an error creating the user
         if(user?.idUsuario == 0) {
             DialogHelper.displayErrorDialogWithoutAction(title: "Error", message: "Hubo un error creando sus credenciales. Intentelo de nuevo mas tarde.", button: "Cerrar", callerController: self)
-            progressBar.hide()
+            activityIndicator.stopAnimating()
             return
         }
         // Create credentials object
@@ -145,7 +142,7 @@ class UserAccountCreationViewController : UIViewController, UIPickerViewDelegate
         // Check if there was an error creating the credentials
         if(credentials?.idUsuario == 0) {
             DialogHelper.displayErrorDialogWithoutAction(title: "Error", message: "Hubo un error creando sus credenciales. Intentelo de nuevo mas tarde.", button: "Cerrar", callerController: self)
-            progressBar.hide()
+            activityIndicator.stopAnimating()
             return
         }
         // Create center object
@@ -153,7 +150,7 @@ class UserAccountCreationViewController : UIViewController, UIPickerViewDelegate
         center = CenterService.createCenters(center: center, idUsuario: 2)
         if(center?.idCentro == 0) {
             DialogHelper.displayErrorDialogWithoutAction(title: "Error", message: "Hubo un error creando su usuario. Intentelo de nuevo mas tarde.", button: "Cerrar", callerController: self)
-            progressBar.hide()
+            activityIndicator.stopAnimating()
             return
         }
         // Save the credentials object in the database
@@ -162,7 +159,7 @@ class UserAccountCreationViewController : UIViewController, UIPickerViewDelegate
         userDefaults.set(encodedData, forKey: "credentials")
         userDefaults.synchronize()
         // Stop progress bar
-        progressBar.hide()
+        activityIndicator.stopAnimating()
         // Hide view
         self.navigationController?.popViewController(animated: true)
 
