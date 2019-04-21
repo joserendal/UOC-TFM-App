@@ -10,6 +10,7 @@
 		A1254CFA226C8E9100984EC8 /* ClientsListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1254CF9226C8E9100984EC8 /* ClientsListController.swift */; };
 		A1254CFC226C946C00984EC8 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1254CFB226C946C00984EC8 /* Client.swift */; };
 		A1254D00226C971B00984EC8 /* ClientsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1254CFF226C971B00984EC8 /* ClientsService.swift */; };
+		A1254D02226CC42600984EC8 /* ClientDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1254D01226CC42600984EC8 /* ClientDetailsController.swift */; };
 		A13C156522688A0200594668 /* FormValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13C156422688A0200594668 /* FormValidator.swift */; };
 		A13C156722688C3D00594668 /* DialogHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13C156622688C3D00594668 /* DialogHelper.swift */; };
 		A15289C62261DBE5008983AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15289C52261DBE5008983AE /* AppDelegate.swift */; };
@@ -51,6 +52,7 @@
 		A1254CF9226C8E9100984EC8 /* ClientsListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientsListController.swift; sourceTree = "<group>"; };
 		A1254CFB226C946C00984EC8 /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		A1254CFF226C971B00984EC8 /* ClientsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientsService.swift; sourceTree = "<group>"; };
+		A1254D01226CC42600984EC8 /* ClientDetailsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientDetailsController.swift; sourceTree = "<group>"; };
 		A13C156422688A0200594668 /* FormValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormValidator.swift; sourceTree = "<group>"; };
 		A13C156622688C3D00594668 /* DialogHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogHelper.swift; sourceTree = "<group>"; };
 		A15289C22261DBE5008983AE /* gGym.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gGym.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -168,6 +170,7 @@
 		A15289F32261DC0F008983AE /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A1254D01226CC42600984EC8 /* ClientDetailsController.swift */,
 				A15289C72261DBE5008983AE /* LoginViewController.swift */,
 				A1695284226251E100F5F377 /* MainMenuViewController.swift */,
 				A16952862262673200F5F377 /* UserAccountCreationViewController.swift */,
@@ -346,6 +349,7 @@
 				A15289FE2261EE2D008983AE /* CredentialsService.swift in Sources */,
 				A19266CC2268F990004E80A3 /* UsuariosService.swift in Sources */,
 				A15289C62261DBE5008983AE /* AppDelegate.swift in Sources */,
+				A1254D02226CC42600984EC8 /* ClientDetailsController.swift in Sources */,
 				A19266C82268F573004E80A3 /* User.swift in Sources */,
 				A1528A012261EFCD008983AE /* Costants.swift in Sources */,
 				A19266D0226903E3004E80A3 /* Center.swift in Sources */,

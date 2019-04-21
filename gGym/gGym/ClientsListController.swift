@@ -13,7 +13,7 @@ class ClientsListControllers: UITableViewController {
     // Data to be displayed in the screen
     var clients: [Client] = []
     // Dictionary with first letter
-    var wordsDictionary = [String:[String]]()
+    var wordsDictionary = [String:[Client]]()
     var wordsSection = [String]()
     
     // Configure view before appearing
@@ -58,7 +58,7 @@ class ClientsListControllers: UITableViewController {
         let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "clientCell")!
         let wordKey = wordsSection[indexPath.section]
         if let wordValues = wordsDictionary[wordKey] {
-            cell.textLabel?.text  = wordValues[indexPath.row]
+            cell.textLabel?.text  = wordValues[indexPath.row].apellidos + ", " + wordValues[indexPath.row].nombre
         }
         
         return cell
@@ -71,10 +71,10 @@ class ClientsListControllers: UITableViewController {
             
             // check if already in the dictionary
             if var values = wordsDictionary[key] {
-                values.append(client.apellidos)
+                values.append(client)
                 wordsDictionary[key] = values
             } else {
-                wordsDictionary[key] = [client.apellidos + ", " + client.nombre]
+                wordsDictionary[key] = [client]
             }
         }
         // Sort the index list
@@ -84,8 +84,26 @@ class ClientsListControllers: UITableViewController {
     
     
     // ---- ACTIONS ----
-    // Action 1. Create Client
+    // Action 1. Create Client button tapped
     @IBAction func createButtonTapped(_ sender: Any) {
+        // Send the user to the Main Menu
+        self.performSegue(withIdentifier: "createClientSegue", sender: self)
+    }
     
+    // User clicked in a row
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // Get the selected client
+        let wordKey = wordsSection[indexPath.section]
+        if let wordValues = wordsDictionary[wordKey] {
+            let selectedClient = wordValues[indexPath.row]
+            self.performSegue(withIdentifier: "clientDetailsSegue", sender: selectedClient)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "clientDetailsSegue" {
+            let detailController = segue.destination as! ClientDetailsController
+            detailController.client = (sender as! Client)
+        } 
     }
 }

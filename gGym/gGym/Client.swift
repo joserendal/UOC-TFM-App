@@ -21,8 +21,9 @@ class Client: NSObject {
     var codigoPostal: String
     var email: String
     var numeroTelefono: String
+    var fechaNacimiento: Date
     
-    init?(nombre: String, apellidos: String, direccion: String, ciudad: String, provincia: String, pais: String, codigoPostal: String, email: String, numeroTelefono: String) {
+    init?(nombre: String, apellidos: String, direccion: String, ciudad: String, provincia: String, pais: String, codigoPostal: String, email: String, numeroTelefono: String, fechaNacimiento: Date) {
         self.idAbonado = 0
         self.idCentroDeportivo = 0
         self.nombre = nombre
@@ -34,7 +35,26 @@ class Client: NSObject {
         self.codigoPostal = codigoPostal
         self.email = email
         self.numeroTelefono = numeroTelefono
+        self.fechaNacimiento = fechaNacimiento
     }
     
-    
+    var jsonRepresentation : Data {
+        // Date formatter
+        let dateformatter = DateFormatter()
+        dateformatter.dateFormat = "yyyy-MM-dd"
+        // JSON dictionary
+        let dict = ["idAbonado" : idAbonado,
+                    "idCentroDeportivo" : idCentroDeportivo,
+                    "nombre" : nombre,
+                    "apellidos" : apellidos,
+                    "direccion" : direccion,
+                    "ciudad" : ciudad,
+                    "provincia" : provincia,
+                    "pais" : pais,
+                    "codigoPostal" : codigoPostal,
+                    "email" : email,
+                    "numeroTelefono" : numeroTelefono,
+                    "fechaNacimiento" : dateformatter.string(from: fechaNacimiento)] as [String : Any]
+        return try! JSONSerialization.data(withJSONObject: dict, options: .prettyPrinted)
+    }
 }
