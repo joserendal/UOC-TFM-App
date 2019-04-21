@@ -54,6 +54,9 @@ class ClientDetailsController: UIViewController {
     // ---- ACTIONS ----
     @IBAction func createButtonTapped(_ sender: Any) {
         // Check if all required fields where introduced
+        if !validateForm() {
+            return
+        }
         
         // Build a client getting the values from the ui
         var userClient = Client(nombre: nombre.text!, apellidos: apellidos.text!, direccion: direccion.text!, ciudad: ciudad.text!, provincia: provincia.text!, pais: pais.text!, codigoPostal: codigoPostal.text!, email: email.text!, numeroTelefono: numeroTelefono.text!, fechaNacimiento: fechaNacimiento.date)
@@ -63,6 +66,24 @@ class ClientDetailsController: UIViewController {
             
             
         }
+    }
+    
+    func validateForm() -> Bool {
+        // 1. All required fields are present
+        let requiredFields =
+            FormValidator.validateRequiredTextFieldAndDisplayAlert(textField: nombre, fieldName: "Nombre del abonado", callerController: self) &&
+            FormValidator.validateRequiredTextFieldAndDisplayAlert(textField: apellidos, fieldName: "Apellidos del abonado", callerController: self) &&
+            FormValidator.validateRequiredTextFieldAndDisplayAlert(textField: numeroTelefono, fieldName: "Número de teléfono", callerController: self)
+        // Check if date field is present
+        if fechaNacimiento == nil {
+            // Display validation error
+            DialogHelper.displayErrorDialogWithoutAction(title: "Error", message: "El campo fecha de nacimiento es requerido", button: "Cerrar", callerController: self)
+            // Validation not succeded
+            return false
+        }
+        // Validation OK
+        return requiredFields
+
     }
 
     @IBAction func cancelButtonTapped(_ sender: Any) {
