@@ -22,6 +22,8 @@ class MainMenuViewController: UITableViewController {
             let credentials = NSKeyedUnarchiver.unarchiveObject(with: data as! Data) as? Credentials
             usernameLabel.text = credentials?.email
         }
+        // Recover the information about the user and save it locally
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -11,9 +11,7 @@ import Foundation
 class CredentialsService {
     
     // Call to the Backend service for Authentication
-    class func login(credentials: Credentials!) -> Bool {
-        // Result
-        var result: Bool!
+    class func login(credentials: Credentials!) -> Credentials {
         // Semaphore for controlling execution
         let semaphore = DispatchSemaphore(value: 0)
         // Build HTTP Request
@@ -32,10 +30,17 @@ class CredentialsService {
             let httpResponse = response as? HTTPURLResponse
             // Return true or false
             if httpResponse?.statusCode == 200{
-                result = true
+                do {
+                    // get the user ID
+                    let json = try JSONSerialization.jsonObject(with: data!, options:.allowFragments)  as! [String:Any]
+                    credentials.idUsuario = json["idUsuario"] as! CLong
+                } catch let parseError as NSError {
+                    print("JSON Error \(parseError.localizedDescription)")
+                }
             } else {
-                result = false
+                credentials.idUsuario = 0
             }
+            
             // End semaphore
             semaphore.signal()
         })
@@ -43,7 +48,7 @@ class CredentialsService {
         dataTask.resume()
         semaphore.wait()
         // Return the result
-        return result;
+        return credentials
     }
     
     

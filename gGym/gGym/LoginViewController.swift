@@ -47,9 +47,9 @@ class LoginViewController: UIViewController {
         // Create a credentials object
         let credentialsObject = Credentials(idUsuario: 0, email: username, password: password)
         // Call the API and get the response
-        let success = CredentialsService.login(credentials: credentialsObject)
+        let credentials = CredentialsService.login(credentials: credentialsObject)
         // If request was wrong
-        if(!success) {
+        if(credentials.idUsuario == 0) {
             // Hide loading dialog
             activityIndicator.stopAnimating()
             // Display an error message

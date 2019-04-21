@@ -17,4 +17,7 @@ struct Constants  {
     static let usuariosPath: String = "/api/usuarios"
     // Centros base path
     static let centrosPath: String = "/api/centros"
+    // Abonados base path
+    static let abonadosPath: String = "/api/abonados"
+    
 }

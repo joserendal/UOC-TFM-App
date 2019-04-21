@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A1254CFA226C8E9100984EC8 /* ClientsListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1254CF9226C8E9100984EC8 /* ClientsListController.swift */; };
+		A1254CFC226C946C00984EC8 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1254CFB226C946C00984EC8 /* Client.swift */; };
+		A1254D00226C971B00984EC8 /* ClientsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1254CFF226C971B00984EC8 /* ClientsService.swift */; };
 		A13C156522688A0200594668 /* FormValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13C156422688A0200594668 /* FormValidator.swift */; };
 		A13C156722688C3D00594668 /* DialogHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13C156622688C3D00594668 /* DialogHelper.swift */; };
 		A15289C62261DBE5008983AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15289C52261DBE5008983AE /* AppDelegate.swift */; };
@@ -45,6 +48,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A1254CF9226C8E9100984EC8 /* ClientsListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientsListController.swift; sourceTree = "<group>"; };
+		A1254CFB226C946C00984EC8 /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		A1254CFF226C971B00984EC8 /* ClientsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientsService.swift; sourceTree = "<group>"; };
 		A13C156422688A0200594668 /* FormValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormValidator.swift; sourceTree = "<group>"; };
 		A13C156622688C3D00594668 /* DialogHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogHelper.swift; sourceTree = "<group>"; };
 		A15289C22261DBE5008983AE /* gGym.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gGym.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -165,6 +171,7 @@
 				A15289C72261DBE5008983AE /* LoginViewController.swift */,
 				A1695284226251E100F5F377 /* MainMenuViewController.swift */,
 				A16952862262673200F5F377 /* UserAccountCreationViewController.swift */,
+				A1254CF9226C8E9100984EC8 /* ClientsListController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -176,6 +183,7 @@
 				A1528A002261EFCD008983AE /* Costants.swift */,
 				A19266C72268F573004E80A3 /* User.swift */,
 				A19266CF226903E3004E80A3 /* Center.swift */,
+				A1254CFB226C946C00984EC8 /* Client.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -186,6 +194,7 @@
 				A15289FD2261EE2D008983AE /* CredentialsService.swift */,
 				A19266CB2268F990004E80A3 /* UsuariosService.swift */,
 				A19266CD2269034F004E80A3 /* CenterService.swift */,
+				A1254CFF226C971B00984EC8 /* ClientsService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -326,11 +335,14 @@
 			files = (
 				A13C156522688A0200594668 /* FormValidator.swift in Sources */,
 				A15289FC2261ED55008983AE /* Credentials.swift in Sources */,
+				A1254D00226C971B00984EC8 /* ClientsService.swift in Sources */,
+				A1254CFA226C8E9100984EC8 /* ClientsListController.swift in Sources */,
 				A13C156722688C3D00594668 /* DialogHelper.swift in Sources */,
 				A16952872262673200F5F377 /* UserAccountCreationViewController.swift in Sources */,
 				A15289C82261DBE5008983AE /* LoginViewController.swift in Sources */,
 				A1695285226251E100F5F377 /* MainMenuViewController.swift in Sources */,
 				A19266CE2269034F004E80A3 /* CenterService.swift in Sources */,
+				A1254CFC226C946C00984EC8 /* Client.swift in Sources */,
 				A15289FE2261EE2D008983AE /* CredentialsService.swift in Sources */,
 				A19266CC2268F990004E80A3 /* UsuariosService.swift in Sources */,
 				A15289C62261DBE5008983AE /* AppDelegate.swift in Sources */,
