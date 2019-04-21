@@ -36,17 +36,14 @@ class Credentials: NSObject, NSCoding {
         //add code here
         aCoder.encode(email, forKey: "email")
         aCoder.encode(password, forKey: "password")
-        aCoder.encode(idUsuario, forKey: "idUsuario")
+        aCoder.encode(String(idUsuario), forKey: "idUsuario")
     }
     
     required convenience init?(coder aDecoder: NSCoder) {
         let email = aDecoder.decodeObject(forKey: "email") as! String
         let password = aDecoder.decodeObject(forKey: "password") as! String
-        var idUsuario = 0
-        if (aDecoder.decodeObject(forKey: "idUsuario") != nil) {
-            idUsuario = aDecoder.decodeObject(forKey: "idUsuario") as! CLong
-        }
-        self.init(idUsuario: idUsuario, email: email, password: password)
+        let idUsuario = aDecoder.decodeObject(forKey: "idUsuario") as! String
+        self.init(idUsuario: CLong(idUsuario)!, email: email, password: password)
     }
     
 }

@@ -27,8 +27,6 @@ class MainMenuViewController: UITableViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        // View title
-        navigationItem.title = "gGym"
         // Remove backward button
         navigationItem.setHidesBackButton(true, animated: true)
     }
