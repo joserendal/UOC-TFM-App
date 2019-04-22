@@ -12,6 +12,8 @@ class ClientDetailsController: UIViewController {
     
     // Received client from table view
     var client: Client?
+    var userId: CLong?
+    var centerId: CLong?
     
     // Outlets
     @IBOutlet weak var nombre: UITextField!
@@ -40,6 +42,15 @@ class ClientDetailsController: UIViewController {
             email.text = client?.email
             codigoPostal.text = client?.codigoPostal
         }
+        // Load the user Id
+        let userDefaults: UserDefaults = UserDefaults.standard
+        if let data = userDefaults.object(forKey: "credentials") {
+            let credentials = NSKeyedUnarchiver.unarchiveObject(with: data as! Data) as? Credentials
+            userId = (credentials?.idUsuario)!
+        }
+        // Get the center of the user
+        let center = CenterService.getCenter(idUsuario: userId!)
+        centerId = center.idCentro
         // Add create button on tab bar
         // Create button
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Guardar", style: .plain, target: self, action: #selector(ClientDetailsController.createButtonTapped))
@@ -59,13 +70,38 @@ class ClientDetailsController: UIViewController {
         }
         
         // Build a client getting the values from the ui
-        var userClient = Client(nombre: nombre.text!, apellidos: apellidos.text!, direccion: direccion.text!, ciudad: ciudad.text!, provincia: provincia.text!, pais: pais.text!, codigoPostal: codigoPostal.text!, email: email.text!, numeroTelefono: numeroTelefono.text!, fechaNacimiento: fechaNacimiento.date)
+        let userClient = Client(nombre: nombre.text!, apellidos: apellidos.text!, direccion: "", ciudad: "", provincia: "", pais: "", codigoPostal: "", email: "", numeroTelefono: numeroTelefono.text!, fechaNacimiento: fechaNacimiento.date)
+        if direccion != nil {
+            userClient?.direccion = direccion.text!
+        }
+        if ciudad != nil {
+            userClient?.ciudad = ciudad.text!
+        }
+        if pais != nil {
+            userClient?.pais = pais.text!
+        }
+        if codigoPostal != nil {
+            userClient?.codigoPostal = codigoPostal.text!
+        }
+        if email != nil {
+            userClient?.email = email.text!
+        }
         
         // if there is a client, call update method
         if client != nil {
-            
-            
+            // Move identifiers
+            userClient?.idAbonado = (client?.idAbonado)!
+            userClient?.idCentroDeportivo = centerId!
+            // call backendfor result
+            let result = ClientsService.updateClient(client: userClient!, idUser: userId!)
+            if !result {
+                // Display an error message
+                DialogHelper.displayErrorDialogWithoutAction(title: "Error", message: "No se pudieron actualizar los datos. Intentelo de nuevo mas tarde", button: "Aceptar", callerController: self)
+                return
+            }
         }
+        // Pop down controller
+        self.navigationController?.popViewController(animated: true)
     }
     
     func validateForm() -> Bool {

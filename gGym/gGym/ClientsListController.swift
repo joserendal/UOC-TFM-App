@@ -33,6 +33,8 @@ class ClientsListControllers: UITableViewController {
         clients = ClientsService.getClientsCenter(idCenter: center.idCentro, idUser: userId)
         // Do generate the index
         generateWordsDictionary()
+        // Force data reloading
+        self.tableView.reloadData()
     }
     
     // ---- TABLE MANAGEMENT ----
@@ -65,6 +67,10 @@ class ClientsListControllers: UITableViewController {
     }
     
     func generateWordsDictionary() {
+        // Clean arrays
+        wordsDictionary = [String:[Client]]()
+        wordsSection = [String]()
+        // Uti
         for client in clients {
             // Do extract the key of the dictionary
             let key = "\(client.apellidos[client.apellidos.startIndex])"
