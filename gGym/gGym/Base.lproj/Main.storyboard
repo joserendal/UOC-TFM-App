@@ -698,6 +698,9 @@
                                                     <state key="normal" title="Pagos" image="pagos">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <segue destination="TFl-Fa-k0n" kind="show" id="4uD-yW-LzZ"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -828,10 +831,51 @@
             </objects>
             <point key="canvasLocation" x="3641" y="230"/>
         </scene>
+        <!--Pagos-->
+        <scene sceneID="EAe-I3-Pc6">
+            <objects>
+                <tableViewController title="Pagos" id="TFl-Fa-k0n" customClass="PaymentsViewController" customModule="gGym" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="bfc-UI-ell">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <segmentedControl key="tableHeaderView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="Wv2-wT-TxD">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="Cobrados"/>
+                                <segment title="Pendientes de cobro"/>
+                            </segments>
+                            <connections>
+                                <action selector="segmentChanged:" destination="TFl-Fa-k0n" eventType="valueChanged" id="NUm-Bo-xT6"/>
+                            </connections>
+                        </segmentedControl>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="paymentCell" id="NhO-nu-Cpu">
+                                <rect key="frame" x="0.0" y="58" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NhO-nu-Cpu" id="IKg-9x-AKE">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="TFl-Fa-k0n" id="wny-Pd-jqe"/>
+                            <outlet property="delegate" destination="TFl-Fa-k0n" id="wS9-te-JeL"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="segmentController" destination="Wv2-wT-TxD" id="lWB-lY-GpK"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tE4-mm-hrT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3642" y="956"/>
+        </scene>
         <!--Client Details Scene-->
         <scene sceneID="Uht-li-seC">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="T2i-5Z-lH6" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="Abonado" id="wHB-us-hcN" userLabel="Client Details Scene" customClass="ClientDetailsController" customModule="gGym" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TMS-FM-fPU"/>
@@ -1048,6 +1092,7 @@
                         <outlet property="provincia" destination="Uxp-gH-amg" id="EoS-zp-NhX"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T2i-5Z-lH6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4491" y="230"/>
         </scene>
