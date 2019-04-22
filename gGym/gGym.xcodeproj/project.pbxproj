@@ -32,6 +32,7 @@
 		A1DE0C21226E22A800CB7D66 /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DE0C20226E22A800CB7D66 /* Payment.swift */; };
 		A1DE0C23226E232800CB7D66 /* PaymentsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DE0C22226E232800CB7D66 /* PaymentsService.swift */; };
 		A1DE0C25226E26E800CB7D66 /* PaymentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DE0C24226E26E800CB7D66 /* PaymentsViewController.swift */; };
+		A1DE0C27226E366B00CB7D66 /* PaymentDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DE0C26226E366B00CB7D66 /* PaymentDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		A1DE0C20226E22A800CB7D66 /* Payment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
 		A1DE0C22226E232800CB7D66 /* PaymentsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentsService.swift; sourceTree = "<group>"; };
 		A1DE0C24226E26E800CB7D66 /* PaymentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentsViewController.swift; sourceTree = "<group>"; };
+		A1DE0C26226E366B00CB7D66 /* PaymentDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +184,7 @@
 				A16952862262673200F5F377 /* UserAccountCreationViewController.swift */,
 				A1254CF9226C8E9100984EC8 /* ClientsListController.swift */,
 				A1DE0C24226E26E800CB7D66 /* PaymentsViewController.swift */,
+				A1DE0C26226E366B00CB7D66 /* PaymentDetailsViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 				A13C156722688C3D00594668 /* DialogHelper.swift in Sources */,
 				A16952872262673200F5F377 /* UserAccountCreationViewController.swift in Sources */,
 				A15289C82261DBE5008983AE /* LoginViewController.swift in Sources */,
+				A1DE0C27226E366B00CB7D66 /* PaymentDetailsViewController.swift in Sources */,
 				A1695285226251E100F5F377 /* MainMenuViewController.swift in Sources */,
 				A19266CE2269034F004E80A3 /* CenterService.swift in Sources */,
 				A1254CFC226C946C00984EC8 /* Client.swift in Sources */,

@@ -126,17 +126,19 @@ class PaymentsViewController: UITableViewController {
     
     // User clicked in a row
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // Get the selected client
-        let wordKey = wordsSection[indexPath.section]
-        if let wordValues = wordsDictionary[wordKey] {
-            let selectedClient = wordValues[indexPath.row]
-            self.performSegue(withIdentifier: "paymentDetailsSegue", sender: selectedClient)
+        if(segmentController.selectedSegmentIndex == 1) {
+            // Get the selected client
+            let wordKey = wordsSection[indexPath.section]
+            if let wordValues = wordsDictionary[wordKey] {
+                let selectedClient = wordValues[indexPath.row]
+                self.performSegue(withIdentifier: "paymentDetailsSegue", sender: selectedClient)
+            }
         }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "paymentDetailsSegue" {
-            let detailController = segue.destination as! ClientDetailsController
+            let detailController = segue.destination as! PaymentDetailsViewController
             detailController.client = (sender as! Client)
         }
     }
