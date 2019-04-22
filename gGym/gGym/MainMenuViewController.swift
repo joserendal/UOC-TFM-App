@@ -31,4 +31,7 @@ class MainMenuViewController: UITableViewController {
         navigationItem.setHidesBackButton(true, animated: true)
     }
 
+    @IBAction func closeButtonTapped(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
 }

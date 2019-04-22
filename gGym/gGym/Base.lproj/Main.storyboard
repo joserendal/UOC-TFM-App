@@ -725,6 +725,9 @@
                                                     <state key="normal" title="Cerrar Sesión" image="cerrarsesion">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="closeButtonTapped:" destination="97u-0L-VJe" eventType="touchUpInside" id="Bdm-Rn-AXy"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>

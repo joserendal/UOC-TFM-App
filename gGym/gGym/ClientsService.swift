@@ -94,6 +94,40 @@ class ClientsService {
         semaphore.wait()
         // Return the result
         return result
-
+    }
+    
+    // Do create a new client using the API
+    class func createClient(client: Client, idUser: CLong) -> Bool {
+        var result = false
+        // Semaphore for controlling execution
+        let semaphore = DispatchSemaphore(value: 0)
+        // Build HTTP Request
+        let request : NSMutableURLRequest = NSMutableURLRequest()
+        request.url = URL(string: Constants.apiHost + Constants.abonadosPath + "/crear")
+        request.httpMethod = "POST"
+        request.timeoutInterval = 30
+        // Request headers
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue(String(idUser), forHTTPHeaderField: "idUsuario")
+        // Request body
+        request.httpBody = client.jsonRepresentation
+        
+        // Send request
+        let dataTask = URLSession.shared.dataTask(with: request as URLRequest, completionHandler: {(data, response, error) in
+            // Get the HTTP Response
+            let httpResponse = response as? HTTPURLResponse
+            // Return true or false
+            if httpResponse?.statusCode == 200{
+                // Operation succeeded
+                result = true
+            }
+            // End semaphore
+            semaphore.signal()
+        })
+        // Execute and wait
+        dataTask.resume()
+        semaphore.wait()
+        // Return the result
+        return result
     }
 }

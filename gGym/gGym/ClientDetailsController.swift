@@ -99,6 +99,16 @@ class ClientDetailsController: UIViewController {
                 DialogHelper.displayErrorDialogWithoutAction(title: "Error", message: "No se pudieron actualizar los datos. Intentelo de nuevo mas tarde", button: "Aceptar", callerController: self)
                 return
             }
+        } else {
+            // Call create method
+            userClient?.idCentroDeportivo = centerId!
+            // call backendfor result
+            let result = ClientsService.createClient(client: userClient!, idUser: userId!)
+            if !result {
+                // Display an error message
+                DialogHelper.displayErrorDialogWithoutAction(title: "Error", message: "No se pudo crear el cliente. Intentelo de nuevo mas tarde", button: "Aceptar", callerController: self)
+                return
+            }
         }
         // Pop down controller
         self.navigationController?.popViewController(animated: true)
