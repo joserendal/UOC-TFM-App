@@ -120,6 +120,15 @@ class ClientsService {
             if httpResponse?.statusCode == 200{
                 // Operation succeeded
                 result = true
+                // Get the user ID from the response
+                do {
+                    // parse the JSON file and the client ID
+                    let json = try JSONSerialization.jsonObject(with: data!, options:.allowFragments)  as! [String:Any]
+                    // Get the information from the JSON response
+                    client.idAbonado = json["idAbonado"] as! CLong
+                } catch let parseError as NSError {
+                    print("JSON Error \(parseError.localizedDescription)")
+                }
             }
             // End semaphore
             semaphore.signal()

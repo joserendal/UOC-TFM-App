@@ -26,9 +26,16 @@ class ClientDetailsController: UIViewController {
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var fechaNacimiento: UIDatePicker!
     @IBOutlet weak var codigoPostal: UITextField!
+    @IBOutlet weak var importeCuota: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Load the user Id
+        let userDefaults: UserDefaults = UserDefaults.standard
+        if let data = userDefaults.object(forKey: "credentials") {
+            let credentials = NSKeyedUnarchiver.unarchiveObject(with: data as! Data) as? Credentials
+            userId = (credentials?.idUsuario)!
+        }
         // if client is not null, present info on the screen
         if client != nil {
             nombre.text = client?.nombre
@@ -41,12 +48,9 @@ class ClientDetailsController: UIViewController {
             numeroTelefono.text = client?.numeroTelefono
             email.text = client?.email
             codigoPostal.text = client?.codigoPostal
-        }
-        // Load the user Id
-        let userDefaults: UserDefaults = UserDefaults.standard
-        if let data = userDefaults.object(forKey: "credentials") {
-            let credentials = NSKeyedUnarchiver.unarchiveObject(with: data as! Data) as? Credentials
-            userId = (credentials?.idUsuario)!
+            // Try to get the receipt from the user
+            let receipt = ReceiptsService.getReceiptForUser(idUser: userId!, idClient: (client?.idAbonado)!)
+            importeCuota.text = String(receipt.importe)
         }
         // Get the center of the user
         let center = CenterService.getCenter(idUsuario: userId!)
@@ -103,11 +107,23 @@ class ClientDetailsController: UIViewController {
             // Call create method
             userClient?.idCentroDeportivo = centerId!
             // call backendfor result
-            let result = ClientsService.createClient(client: userClient!, idUser: userId!)
+            var result = ClientsService.createClient(client: userClient!, idUser: userId!)
             if !result {
                 // Display an error message
                 DialogHelper.displayErrorDialogWithoutAction(title: "Error", message: "No se pudo crear el cliente. Intentelo de nuevo mas tarde", button: "Aceptar", callerController: self)
                 return
+            }
+            // If the receipt is not null
+            if(importeCuota != nil) {
+                // Create the receipt
+                let receipt = Receipt(idAbonado: (userClient?.idAbonado)!, importe: Double(importeCuota.text!)!, periodicidad: "Mensual")
+                // Call backend service
+                result = ReceiptsService.createReceipt(idUser: userId!, receipt: receipt!)
+                if !result {
+                    // Display an error message
+                    DialogHelper.displayErrorDialogWithoutAction(title: "Error", message: "No se pudo crear la cuota del cliente. Intentelo de nuevo mas tarde", button: "Aceptar", callerController: self)
+                    return
+                }
             }
         }
         // Pop down controller

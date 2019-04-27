@@ -21,5 +21,7 @@ struct Constants  {
     static let abonadosPath: String = "/api/abonados"
     // Payments base path
     static let pagosPath: String = "/api/pagos"
+    // Receipts base path
+    static let receiptsPath: String = "/api/cuotas"
     
 }

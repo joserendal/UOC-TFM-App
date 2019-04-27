@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A11CA2112274615E0022F54A /* Receipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11CA2102274615E0022F54A /* Receipt.swift */; };
+		A11CA213227461FD0022F54A /* ReceiptsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11CA212227461FD0022F54A /* ReceiptsService.swift */; };
 		A1254CFA226C8E9100984EC8 /* ClientsListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1254CF9226C8E9100984EC8 /* ClientsListController.swift */; };
 		A1254CFC226C946C00984EC8 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1254CFB226C946C00984EC8 /* Client.swift */; };
 		A1254D00226C971B00984EC8 /* ClientsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1254CFF226C971B00984EC8 /* ClientsService.swift */; };
@@ -53,6 +55,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A11CA2102274615E0022F54A /* Receipt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Receipt.swift; sourceTree = "<group>"; };
+		A11CA212227461FD0022F54A /* ReceiptsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiptsService.swift; sourceTree = "<group>"; };
 		A1254CF9226C8E9100984EC8 /* ClientsListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientsListController.swift; sourceTree = "<group>"; };
 		A1254CFB226C946C00984EC8 /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		A1254CFF226C971B00984EC8 /* ClientsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientsService.swift; sourceTree = "<group>"; };
@@ -198,6 +202,7 @@
 				A19266CF226903E3004E80A3 /* Center.swift */,
 				A1254CFB226C946C00984EC8 /* Client.swift */,
 				A1DE0C20226E22A800CB7D66 /* Payment.swift */,
+				A11CA2102274615E0022F54A /* Receipt.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -210,6 +215,7 @@
 				A19266CD2269034F004E80A3 /* CenterService.swift */,
 				A1254CFF226C971B00984EC8 /* ClientsService.swift */,
 				A1DE0C22226E232800CB7D66 /* PaymentsService.swift */,
+				A11CA212227461FD0022F54A /* ReceiptsService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -360,12 +366,14 @@
 				A19266CE2269034F004E80A3 /* CenterService.swift in Sources */,
 				A1254CFC226C946C00984EC8 /* Client.swift in Sources */,
 				A15289FE2261EE2D008983AE /* CredentialsService.swift in Sources */,
+				A11CA213227461FD0022F54A /* ReceiptsService.swift in Sources */,
 				A19266CC2268F990004E80A3 /* UsuariosService.swift in Sources */,
 				A15289C62261DBE5008983AE /* AppDelegate.swift in Sources */,
 				A1254D02226CC42600984EC8 /* ClientDetailsController.swift in Sources */,
 				A1DE0C23226E232800CB7D66 /* PaymentsService.swift in Sources */,
 				A1DE0C25226E26E800CB7D66 /* PaymentsViewController.swift in Sources */,
 				A19266C82268F573004E80A3 /* User.swift in Sources */,
+				A11CA2112274615E0022F54A /* Receipt.swift in Sources */,
 				A1528A012261EFCD008983AE /* Costants.swift in Sources */,
 				A1DE0C21226E22A800CB7D66 /* Payment.swift in Sources */,
 				A19266D0226903E3004E80A3 /* Center.swift in Sources */,
