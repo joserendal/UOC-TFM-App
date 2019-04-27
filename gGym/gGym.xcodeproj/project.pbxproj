@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A11CA2112274615E0022F54A /* Receipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11CA2102274615E0022F54A /* Receipt.swift */; };
 		A11CA213227461FD0022F54A /* ReceiptsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11CA212227461FD0022F54A /* ReceiptsService.swift */; };
+		A11CA21522747D990022F54A /* DateSelectionPopupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11CA21422747D990022F54A /* DateSelectionPopupController.swift */; };
 		A1254CFA226C8E9100984EC8 /* ClientsListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1254CF9226C8E9100984EC8 /* ClientsListController.swift */; };
 		A1254CFC226C946C00984EC8 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1254CFB226C946C00984EC8 /* Client.swift */; };
 		A1254D00226C971B00984EC8 /* ClientsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1254CFF226C971B00984EC8 /* ClientsService.swift */; };
@@ -57,6 +58,7 @@
 /* Begin PBXFileReference section */
 		A11CA2102274615E0022F54A /* Receipt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Receipt.swift; sourceTree = "<group>"; };
 		A11CA212227461FD0022F54A /* ReceiptsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiptsService.swift; sourceTree = "<group>"; };
+		A11CA21422747D990022F54A /* DateSelectionPopupController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateSelectionPopupController.swift; sourceTree = "<group>"; };
 		A1254CF9226C8E9100984EC8 /* ClientsListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientsListController.swift; sourceTree = "<group>"; };
 		A1254CFB226C946C00984EC8 /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		A1254CFF226C971B00984EC8 /* ClientsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientsService.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 				A1254CF9226C8E9100984EC8 /* ClientsListController.swift */,
 				A1DE0C24226E26E800CB7D66 /* PaymentsViewController.swift */,
 				A1DE0C26226E366B00CB7D66 /* PaymentDetailsViewController.swift */,
+				A11CA21422747D990022F54A /* DateSelectionPopupController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 				A1254CFC226C946C00984EC8 /* Client.swift in Sources */,
 				A15289FE2261EE2D008983AE /* CredentialsService.swift in Sources */,
 				A11CA213227461FD0022F54A /* ReceiptsService.swift in Sources */,
+				A11CA21522747D990022F54A /* DateSelectionPopupController.swift in Sources */,
 				A19266CC2268F990004E80A3 /* UsuariosService.swift in Sources */,
 				A15289C62261DBE5008983AE /* AppDelegate.swift in Sources */,
 				A1254D02226CC42600984EC8 /* ClientDetailsController.swift in Sources */,

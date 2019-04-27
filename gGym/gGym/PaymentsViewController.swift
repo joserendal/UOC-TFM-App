@@ -20,22 +20,36 @@ class PaymentsViewController: UITableViewController {
     // Received client from table view
     var userId: CLong?
     var centerId: CLong?
+    // Month and Year to be displayed
+    var month: Int?
+    var year: Int?
     
     // Configure view before appearing
     override func viewWillAppear(_ animated: Bool) {
         // Set the segment clicked
         segmentController.selectedSegmentIndex = 0
+        // Create button
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Selecc. Fechas", style: .plain, target: self, action: #selector(PaymentsViewController.selectDateTapped))
         // Recover user information
         let userDefaults: UserDefaults = UserDefaults.standard
         if let data = userDefaults.object(forKey: "credentials") {
             let credentials = NSKeyedUnarchiver.unarchiveObject(with: data as! Data) as? Credentials
             userId = (credentials?.idUsuario)!
         }
+        // get the current date and month if not selected previously
+        if month == nil {
+            let date = Date()
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyy"
+            year = Int(formatter.string(from: date))
+            formatter.dateFormat = "MM"
+            month = Int(formatter.string(from: date))
+        }
         // Get the center of the user
         let center = CenterService.getCenter(idUsuario: userId!)
         centerId = center.idCentro
         // Get the list of payments from the backend
-        payments = PaymentsService.getPaidPayments(idCenter: centerId!, idUser: userId!)
+        payments = PaymentsService.getPaidPayments(idCenter: centerId!, idUser: userId!, month: month!, year: year!)
         // Do generate the index
         generateWordsDictionary()
         // Force data reloading
@@ -50,14 +64,14 @@ class PaymentsViewController: UITableViewController {
         switch index {
         case 1:
             // Load paid payments
-            payments = PaymentsService.getPendingPayments(idCenter: centerId!, idUser: userId!)
+            payments = PaymentsService.getPendingPayments(idCenter: centerId!, idUser: userId!, month: month!, year: year!)
             // Do generate the index
             generateWordsDictionary()
             // Force data reloading
             self.tableView.reloadData()
         default:
             // Load unpaid payments
-            payments = PaymentsService.getPaidPayments(idCenter: centerId!, idUser: userId!)
+            payments = PaymentsService.getPaidPayments(idCenter: centerId!, idUser: userId!, month: month!, year: year!)
             // Do generate the index
             generateWordsDictionary()
             // Force data reloading
@@ -130,11 +144,20 @@ class PaymentsViewController: UITableViewController {
         }
     }
     
+    // Select date tapped. Display date modal segue.
+    @IBAction func selectDateTapped(_ sender: Any) {
+        self.performSegue(withIdentifier: "presentDateModalSegue", sender: self)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "paymentDetailsSegue" {
             let detailController = segue.destination as! PaymentDetailsViewController
             detailController.client = (sender as! Client)
         }
+        else if segue.identifier == "presentDateModalSegue" {
+            let detailController = segue.destination as! DateSelectionPopupController
+            detailController.receivedYear = year
+            detailController.receivedMonth = month
+        }
     }
-
 }

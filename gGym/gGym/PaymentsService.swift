@@ -11,14 +11,14 @@ import Foundation
 class PaymentsService {
     
     // Call to the Backend service for recovering pending payments
-    class func getPendingPayments(idCenter: CLong, idUser: CLong) -> [Payment] {
+    class func getPendingPayments(idCenter: CLong, idUser: CLong, month: Int, year: Int) -> [Payment] {
         // List of payments to be returned
         var payments = [Payment]()
         // Semaphore for controlling execution
         let semaphore = DispatchSemaphore(value: 0)
         // Build HTTP Request
         let request : NSMutableURLRequest = NSMutableURLRequest()
-        request.url = URL(string: Constants.apiHost + Constants.pagosPath + "/pendientes/" + String(idCenter))
+        request.url = URL(string: Constants.apiHost + Constants.pagosPath + "/pendientes/" + String(idCenter) + "/" + String(month) + "/" + String(year))
         request.httpMethod = "GET"
         request.timeoutInterval = 30
         // Request headers
@@ -86,14 +86,14 @@ class PaymentsService {
     }
     
     // Call to the Backend service for recovering pending payments
-    class func getPaidPayments(idCenter: CLong, idUser: CLong) -> [Payment] {
+    class func getPaidPayments(idCenter: CLong, idUser: CLong, month: Int, year: Int) -> [Payment] {
         // List of payments to be returned
         var payments = [Payment]()
         // Semaphore for controlling execution
         let semaphore = DispatchSemaphore(value: 0)
         // Build HTTP Request
         let request : NSMutableURLRequest = NSMutableURLRequest()
-        request.url = URL(string: Constants.apiHost + Constants.pagosPath + "/abonados/" + String(idCenter))
+        request.url = URL(string: Constants.apiHost + Constants.pagosPath + "/abonados/" + String(idCenter) + "/" + String(month) + "/" + String(year))
         request.httpMethod = "GET"
         request.timeoutInterval = 30
         // Request headers

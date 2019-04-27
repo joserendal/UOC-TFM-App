@@ -869,11 +869,12 @@
                         <outlet property="segmentController" destination="Wv2-wT-TxD" id="lWB-lY-GpK"/>
                         <segue destination="6r5-06-xZb" kind="show" identifier="createPaymentSegue" id="wns-FK-9dS"/>
                         <segue destination="6r5-06-xZb" kind="show" identifier="paymentDetailsSegue" id="4Zk-gp-Hoo"/>
+                        <segue destination="iQN-Se-p0k" kind="presentation" identifier="presentDateModalSegue" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="bjg-v3-ECD"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tE4-mm-hrT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3642" y="956"/>
+            <point key="canvasLocation" x="3620" y="1253"/>
         </scene>
         <!--Detalles del Abono-->
         <scene sceneID="HmX-ik-asY">
@@ -977,6 +978,95 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gcM-g5-zAi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4505.7971014492759" y="958.69565217391312"/>
+        </scene>
+        <!--Seleccion de Fechas-->
+        <scene sceneID="sVl-eJ-lJB">
+            <objects>
+                <viewController title="Seleccion de Fechas" id="iQN-Se-p0k" customClass="DateSelectionPopupController" customModule="gGym" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zms-JZ-SkA"/>
+                        <viewControllerLayoutGuide type="bottom" id="mrI-x4-FC0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nwx-gw-FnG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G2e-qE-Lni">
+                                <rect key="frame" x="45" y="268" width="325" height="200"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="2cg-di-idW">
+                                    <rect key="frame" x="0.0" y="0.0" width="325" height="200"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Seleccione Mes y Año" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="46Q-OD-gZ6">
+                                            <rect key="frame" x="20" y="18" width="277" height="29"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="12" translatesAutoresizingMaskIntoConstraints="NO" id="JKh-gM-jgd" userLabel="Stepper Mes">
+                                            <rect key="frame" x="40" y="55" width="94" height="29"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <connections>
+                                                <action selector="monthStepperChanged:" destination="iQN-Se-p0k" eventType="valueChanged" id="3YX-Qp-8rn"/>
+                                            </connections>
+                                        </stepper>
+                                        <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2000" minimumValue="2000" maximumValue="2100" translatesAutoresizingMaskIntoConstraints="NO" id="rk4-7y-r9U" userLabel="Stepper Año">
+                                            <rect key="frame" x="40" y="102" width="94" height="29"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <connections>
+                                                <action selector="yearStepperChanged:" destination="iQN-Se-p0k" eventType="valueChanged" id="Beu-2u-MMK"/>
+                                            </connections>
+                                        </stepper>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LFq-1w-IIe">
+                                            <rect key="frame" x="186" y="55" width="130" height="29"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Año" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FWZ-hw-di6">
+                                            <rect key="frame" x="186" y="102" width="130" height="29"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pZG-76-LgJ">
+                                            <rect key="frame" x="95" y="162" width="126" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <state key="normal" title="Aceptar"/>
+                                            <connections>
+                                                <action selector="submitButtonTapped:" destination="iQN-Se-p0k" eventType="touchUpInside" id="wZi-0w-ujY"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.85726939754437681" green="0.85726939754437681" blue="0.85726939754437681" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Zv3-GB-gPB"/>
+                                    <constraint firstAttribute="width" constant="325" id="iYn-5K-tmt"/>
+                                </constraints>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="G2e-qE-Lni" firstAttribute="centerY" secondItem="nwx-gw-FnG" secondAttribute="centerY" id="9uC-Re-W7p"/>
+                            <constraint firstItem="G2e-qE-Lni" firstAttribute="centerX" secondItem="nwx-gw-FnG" secondAttribute="centerX" id="Fpl-I1-wzP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="monthLabel" destination="LFq-1w-IIe" id="peQ-LD-vcD"/>
+                        <outlet property="monthStepper" destination="JKh-gM-jgd" id="P2b-Km-eJf"/>
+                        <outlet property="yearLabel" destination="FWZ-hw-di6" id="Rpa-UH-5dI"/>
+                        <outlet property="yearStepper" destination="rk4-7y-r9U" id="6ca-fT-ymu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UE8-gN-Utl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4488.4057971014499" y="1647.554347826087"/>
         </scene>
         <!--Client Details Scene-->
         <scene sceneID="Uht-li-seC">
