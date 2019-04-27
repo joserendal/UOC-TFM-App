@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol DateSelectionCustomDelegate: class {
+    func sendDataBackToHomePageViewController(month: Int?, year: Int?)
+}
+
 class DateSelectionPopupController: UIViewController {
     
     // Outlets
@@ -18,6 +22,8 @@ class DateSelectionPopupController: UIViewController {
     // variables
     var receivedMonth: Int?
     var receivedYear: Int?
+    // Delegate
+    weak var customDelegateForDataReturn: DateSelectionCustomDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +43,10 @@ class DateSelectionPopupController: UIViewController {
     
     // Action
     @IBAction func submitButtonTapped(_ sender: Any) {
-        
+        // Send data back to the parent controller
+        customDelegateForDataReturn?.sendDataBackToHomePageViewController(month: Int(monthStepper.value), year: Int(yearStepper.value))
+        // Pop view controller
+        dismiss(animated: true, completion: nil)
     }
     
 }

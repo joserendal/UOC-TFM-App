@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PaymentsViewController: UITableViewController {
+class PaymentsViewController: UITableViewController, DateSelectionCustomDelegate {
 
     // Segment controller
     @IBOutlet weak var segmentController: UISegmentedControl!
@@ -28,14 +28,6 @@ class PaymentsViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         // Set the segment clicked
         segmentController.selectedSegmentIndex = 0
-        // Create button
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Selecc. Fechas", style: .plain, target: self, action: #selector(PaymentsViewController.selectDateTapped))
-        // Recover user information
-        let userDefaults: UserDefaults = UserDefaults.standard
-        if let data = userDefaults.object(forKey: "credentials") {
-            let credentials = NSKeyedUnarchiver.unarchiveObject(with: data as! Data) as? Credentials
-            userId = (credentials?.idUsuario)!
-        }
         // get the current date and month if not selected previously
         if month == nil {
             let date = Date()
@@ -44,6 +36,16 @@ class PaymentsViewController: UITableViewController {
             year = Int(formatter.string(from: date))
             formatter.dateFormat = "MM"
             month = Int(formatter.string(from: date))
+        }
+        // Create button
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Sel. Fechas", style: .plain, target: self, action: #selector(PaymentsViewController.selectDateTapped))
+        // Navigation title
+        navigationItem.title = "Abonos " + String(describing: month!) + "/" + String(describing: year!)
+        // Recover user information
+        let userDefaults: UserDefaults = UserDefaults.standard
+        if let data = userDefaults.object(forKey: "credentials") {
+            let credentials = NSKeyedUnarchiver.unarchiveObject(with: data as! Data) as? Credentials
+            userId = (credentials?.idUsuario)!
         }
         // Get the center of the user
         let center = CenterService.getCenter(idUsuario: userId!)
@@ -146,18 +148,26 @@ class PaymentsViewController: UITableViewController {
     
     // Select date tapped. Display date modal segue.
     @IBAction func selectDateTapped(_ sender: Any) {
-        self.performSegue(withIdentifier: "presentDateModalSegue", sender: self)
+        let dateSelectionModalDialog = storyboard!.instantiateViewController(withIdentifier: "dateSelectionModalDialog") as! DateSelectionPopupController
+        dateSelectionModalDialog.customDelegateForDataReturn = self
+        dateSelectionModalDialog.receivedYear = year
+        dateSelectionModalDialog.receivedMonth = month
+        present(dateSelectionModalDialog, animated: true, completion: nil)
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "paymentDetailsSegue" {
             let detailController = segue.destination as! PaymentDetailsViewController
             detailController.client = (sender as! Client)
+            detailController.month = month
+            detailController.year = year
         }
-        else if segue.identifier == "presentDateModalSegue" {
-            let detailController = segue.destination as! DateSelectionPopupController
-            detailController.receivedYear = year
-            detailController.receivedMonth = month
-        }
+    }
+    
+    // ---- DATA RECEIVED FROM MODAL DIALOG ----
+    func sendDataBackToHomePageViewController(month: Int?, year: Int?) {
+        self.month = month
+        self.year = year
     }
 }

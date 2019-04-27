@@ -13,6 +13,9 @@ class PaymentDetailsViewController: UIViewController {
     // Received client from table view
     var client: Client?
     var userId: CLong?
+    // variables
+    var month: Int?
+    var year: Int?
     // Outlets
     @IBOutlet weak var clientField: UILabel!
     @IBOutlet weak var amountField: UILabel!
@@ -33,6 +36,12 @@ class PaymentDetailsViewController: UIViewController {
         // Recover the receipt for this user
         let receipt = ReceiptsService.getReceiptForUser(idUser: userId!, idClient: (client?.idAbonado)!)
         amountField.text = String(receipt.importe)
+        // Paint the date received in the date picker
+        let gregorianCalendar = NSCalendar(calendarIdentifier: .gregorian)!
+        var dateComponents = DateComponents()
+        dateComponents.year = year
+        dateComponents.month = month
+        amountDateField.date = gregorianCalendar.date(from: dateComponents)!
     }
 
     override func didReceiveMemoryWarning() {

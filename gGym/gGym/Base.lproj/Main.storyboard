@@ -889,7 +889,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="kAm-sB-EpB">
-                                <rect key="frame" x="10" y="64" width="394" height="377.66666666666669"/>
+                                <rect key="frame" x="10" y="64.000000000000028" width="394" height="385.66666666666674"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Abonado" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rqF-Ht-lJV" userLabel="Label Abonado">
                                         <rect key="frame" x="0.0" y="0.0" width="394" height="20.333333333333329"/>
@@ -928,14 +928,16 @@
                                         </date>
                                     </datePicker>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5WK-BB-KvR">
-                                        <rect key="frame" x="0.0" y="317.66666666666669" width="394" height="30"/>
+                                        <rect key="frame" x="0.0" y="317.66666666666669" width="394" height="35"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                         <state key="normal" title="Guardar"/>
                                         <connections>
                                             <action selector="saveButtonTapped:" destination="6r5-06-xZb" eventType="touchUpInside" id="cEW-Wh-Aed"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ec-Cv-zIu">
-                                        <rect key="frame" x="0.0" y="347.66666666666669" width="394" height="30"/>
+                                        <rect key="frame" x="0.0" y="352.66666666666669" width="394" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title="Cancelar">
                                             <color key="titleColor" red="1" green="0.14236066780000001" blue="0.082741251700000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -982,12 +984,12 @@
         <!--Seleccion de Fechas-->
         <scene sceneID="sVl-eJ-lJB">
             <objects>
-                <viewController title="Seleccion de Fechas" id="iQN-Se-p0k" customClass="DateSelectionPopupController" customModule="gGym" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="dateSelectionModalDialog" title="Seleccion de Fechas" id="iQN-Se-p0k" customClass="DateSelectionPopupController" customModule="gGym" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zms-JZ-SkA"/>
                         <viewControllerLayoutGuide type="bottom" id="mrI-x4-FC0"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="nwx-gw-FnG">
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="nwx-gw-FnG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -1051,7 +1053,6 @@
                                 <blurEffect style="light"/>
                             </visualEffectView>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="G2e-qE-Lni" firstAttribute="centerY" secondItem="nwx-gw-FnG" secondAttribute="centerY" id="9uC-Re-W7p"/>
                             <constraint firstItem="G2e-qE-Lni" firstAttribute="centerX" secondItem="nwx-gw-FnG" secondAttribute="centerX" id="Fpl-I1-wzP"/>
