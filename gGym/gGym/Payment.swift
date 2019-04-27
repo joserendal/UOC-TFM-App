@@ -22,4 +22,10 @@ class Payment: NSObject {
         self.anio = anio
     }
     
+    var jsonRepresentation : Data {
+        let dict = ["idAbonado" : ["idAbonado" : idAbonado.idAbonado] as [String : Any],
+                    "mes" : String(mes),
+                    "anio" : String(anio)] as [String : Any]
+        return try! JSONSerialization.data(withJSONObject: dict, options: .prettyPrinted)
+    }
 }

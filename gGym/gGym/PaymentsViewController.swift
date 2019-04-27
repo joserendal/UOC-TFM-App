@@ -23,8 +23,8 @@ class PaymentsViewController: UITableViewController {
     
     // Configure view before appearing
     override func viewWillAppear(_ animated: Bool) {
-        // Create button
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Registrar Pago", style: .plain, target: self, action: #selector(PaymentsViewController.createButtonTapped))
+        // Set the segment clicked
+        segmentController.selectedSegmentIndex = 0
         // Recover user information
         let userDefaults: UserDefaults = UserDefaults.standard
         if let data = userDefaults.object(forKey: "credentials") {
@@ -117,13 +117,7 @@ class PaymentsViewController: UITableViewController {
     }
     
     
-    // ---- ACTIONS ----
-    // Action 1. Create Client button tapped
-    @IBAction func createButtonTapped(_ sender: Any) {
-        // Send the user to the Main Menu
-        self.performSegue(withIdentifier: "createPaymentSegue", sender: self)
-    }
-    
+    // ---- ACTIONS ----    
     // User clicked in a row
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if(segmentController.selectedSegmentIndex == 1) {

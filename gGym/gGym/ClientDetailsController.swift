@@ -113,17 +113,14 @@ class ClientDetailsController: UIViewController {
                 DialogHelper.displayErrorDialogWithoutAction(title: "Error", message: "No se pudo crear el cliente. Intentelo de nuevo mas tarde", button: "Aceptar", callerController: self)
                 return
             }
-            // If the receipt is not null
-            if(importeCuota != nil) {
-                // Create the receipt
-                let receipt = Receipt(idAbonado: (userClient?.idAbonado)!, importe: Double(importeCuota.text!)!, periodicidad: "Mensual")
-                // Call backend service
-                result = ReceiptsService.createReceipt(idUser: userId!, receipt: receipt!)
-                if !result {
-                    // Display an error message
-                    DialogHelper.displayErrorDialogWithoutAction(title: "Error", message: "No se pudo crear la cuota del cliente. Intentelo de nuevo mas tarde", button: "Aceptar", callerController: self)
-                    return
-                }
+            // Create the receipt
+            let receipt = Receipt(idAbonado: (userClient?.idAbonado)!, importe: Double(importeCuota.text!)!, periodicidad: "Mensual")
+            // Call backend service
+            result = ReceiptsService.createReceipt(idUser: userId!, receipt: receipt!)
+            if !result {
+                 // Display an error message
+                 DialogHelper.displayErrorDialogWithoutAction(title: "Error", message: "No se pudo crear la cuota del cliente. Intentelo de nuevo mas tarde", button: "Aceptar", callerController: self)
+                 return
             }
         }
         // Pop down controller
@@ -135,7 +132,8 @@ class ClientDetailsController: UIViewController {
         let requiredFields =
             FormValidator.validateRequiredTextFieldAndDisplayAlert(textField: nombre, fieldName: "Nombre del abonado", callerController: self) &&
             FormValidator.validateRequiredTextFieldAndDisplayAlert(textField: apellidos, fieldName: "Apellidos del abonado", callerController: self) &&
-            FormValidator.validateRequiredTextFieldAndDisplayAlert(textField: numeroTelefono, fieldName: "Número de teléfono", callerController: self)
+            FormValidator.validateRequiredTextFieldAndDisplayAlert(textField: numeroTelefono, fieldName: "Número de teléfono", callerController: self) &&
+            FormValidator.validateRequiredTextFieldAndDisplayAlert(textField: importeCuota, fieldName: "Importe de la cuota", callerController: self)
         // Check if date field is present
         if fechaNacimiento == nil {
             // Display validation error
