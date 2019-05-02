@@ -14,12 +14,14 @@ class Equipment: NSObject {
     var idCentroDeportivo: CLong
     var nombreEquipamiento: String
     var descripcionEquipamiento: String
+    var reservas: [Reservation]
     
     init?(idEquipamiento: CLong, idCentroDeportivo: CLong, nombreEquipamiento: String, descripcionEquipamiento: String) {
         self.idEquipamiento = idEquipamiento
         self.idCentroDeportivo = idCentroDeportivo
         self.nombreEquipamiento = nombreEquipamiento
         self.descripcionEquipamiento = descripcionEquipamiento
+        self.reservas = [Reservation]()
     }
     
     var jsonRepresentation : Data {

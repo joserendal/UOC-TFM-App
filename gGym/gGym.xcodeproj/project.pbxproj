@@ -36,6 +36,9 @@
 		A19266CC2268F990004E80A3 /* UsuariosService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19266CB2268F990004E80A3 /* UsuariosService.swift */; };
 		A19266CE2269034F004E80A3 /* CenterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19266CD2269034F004E80A3 /* CenterService.swift */; };
 		A19266D0226903E3004E80A3 /* Center.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19266CF226903E3004E80A3 /* Center.swift */; };
+		A1AC3D25227B5A0500509A44 /* Reservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AC3D24227B5A0500509A44 /* Reservation.swift */; };
+		A1AC3D27227B679B00509A44 /* ReservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AC3D26227B679B00509A44 /* ReservationViewController.swift */; };
+		A1AC3D29227B79E600509A44 /* ReservationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AC3D28227B79E600509A44 /* ReservationService.swift */; };
 		A1DE0C21226E22A800CB7D66 /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DE0C20226E22A800CB7D66 /* Payment.swift */; };
 		A1DE0C23226E232800CB7D66 /* PaymentsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DE0C22226E232800CB7D66 /* PaymentsService.swift */; };
 		A1DE0C25226E26E800CB7D66 /* PaymentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DE0C24226E26E800CB7D66 /* PaymentsViewController.swift */; };
@@ -95,6 +98,9 @@
 		A19266CB2268F990004E80A3 /* UsuariosService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsuariosService.swift; sourceTree = "<group>"; };
 		A19266CD2269034F004E80A3 /* CenterService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterService.swift; sourceTree = "<group>"; };
 		A19266CF226903E3004E80A3 /* Center.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Center.swift; sourceTree = "<group>"; };
+		A1AC3D24227B5A0500509A44 /* Reservation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reservation.swift; sourceTree = "<group>"; };
+		A1AC3D26227B679B00509A44 /* ReservationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationViewController.swift; sourceTree = "<group>"; };
+		A1AC3D28227B79E600509A44 /* ReservationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationService.swift; sourceTree = "<group>"; };
 		A1DE0C20226E22A800CB7D66 /* Payment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
 		A1DE0C22226E232800CB7D66 /* PaymentsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentsService.swift; sourceTree = "<group>"; };
 		A1DE0C24226E26E800CB7D66 /* PaymentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentsViewController.swift; sourceTree = "<group>"; };
@@ -202,6 +208,7 @@
 				A11CA21422747D990022F54A /* DateSelectionPopupController.swift */,
 				A14F8767227B0613004CC699 /* EquipmentListViewController.swift */,
 				A14F876D227B1357004CC699 /* EquipmentDetailsViewController.swift */,
+				A1AC3D26227B679B00509A44 /* ReservationViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -217,6 +224,7 @@
 				A1DE0C20226E22A800CB7D66 /* Payment.swift */,
 				A11CA2102274615E0022F54A /* Receipt.swift */,
 				A14F8769227B065E004CC699 /* Equipment.swift */,
+				A1AC3D24227B5A0500509A44 /* Reservation.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -231,6 +239,7 @@
 				A1DE0C22226E232800CB7D66 /* PaymentsService.swift */,
 				A11CA212227461FD0022F54A /* ReceiptsService.swift */,
 				A14F876B227B0703004CC699 /* EquipmentsService.swift */,
+				A1AC3D28227B79E600509A44 /* ReservationService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -378,6 +387,7 @@
 				A15289FC2261ED55008983AE /* Credentials.swift in Sources */,
 				A1254D00226C971B00984EC8 /* ClientsService.swift in Sources */,
 				A1254CFA226C8E9100984EC8 /* ClientsListController.swift in Sources */,
+				A1AC3D27227B679B00509A44 /* ReservationViewController.swift in Sources */,
 				A13C156722688C3D00594668 /* DialogHelper.swift in Sources */,
 				A16952872262673200F5F377 /* UserAccountCreationViewController.swift in Sources */,
 				A14F876A227B065E004CC699 /* Equipment.swift in Sources */,
@@ -385,6 +395,7 @@
 				A14F8768227B0613004CC699 /* EquipmentListViewController.swift in Sources */,
 				A1DE0C27226E366B00CB7D66 /* PaymentDetailsViewController.swift in Sources */,
 				A1695285226251E100F5F377 /* MainMenuViewController.swift in Sources */,
+				A1AC3D29227B79E600509A44 /* ReservationService.swift in Sources */,
 				A19266CE2269034F004E80A3 /* CenterService.swift in Sources */,
 				A1254CFC226C946C00984EC8 /* Client.swift in Sources */,
 				A15289FE2261EE2D008983AE /* CredentialsService.swift in Sources */,
@@ -396,6 +407,7 @@
 				A1DE0C23226E232800CB7D66 /* PaymentsService.swift in Sources */,
 				A1DE0C25226E26E800CB7D66 /* PaymentsViewController.swift in Sources */,
 				A19266C82268F573004E80A3 /* User.swift in Sources */,
+				A1AC3D25227B5A0500509A44 /* Reservation.swift in Sources */,
 				A11CA2112274615E0022F54A /* Receipt.swift in Sources */,
 				A14F876E227B1357004CC699 /* EquipmentDetailsViewController.swift in Sources */,
 				A1528A012261EFCD008983AE /* Costants.swift in Sources */,

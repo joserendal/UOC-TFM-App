@@ -39,6 +39,22 @@ class EquipmentsService {
                         let dictionary = equipmentJSON as! NSDictionary
                         // Do recover the equipment information
                         let equipment = Equipment(idEquipamiento: dictionary["idEquipamiento"] as! CLong, idCentroDeportivo: dictionary["idCentroDeportivo"] as! CLong, nombreEquipamiento: dictionary["nombreEquipamiento"] as! String, descripcionEquipamiento: dictionary["descripcionEquipamiento"] as! String)
+                        // Do recover reservation information for this operation
+                        let reservations = dictionary["reservas"]  as? NSArray
+                        // Get the information from the array of objects
+                        for reservation in reservations! {
+                            // Covert to a dictionary
+                            let resDictionary = reservation as! NSDictionary
+                            // Date formatter for parsing dates
+                            let dateFormatter = DateFormatter()
+                            dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+                            let reservaDesdeStr = resDictionary["reservaDesde"] as! String
+                            let reservaHastaStr = resDictionary["reservaHasta"] as! String
+                            // Do recover the reservation information
+                            let reservationJSON = Reservation(idEquipamiento: resDictionary["idEquipamiento"] as! CLong, idReserva: resDictionary["idReserva"] as! CLong, idAbonado: resDictionary["idAbonado"] as! CLong, reservaDesde: dateFormatter.date(from: reservaDesdeStr)!, reservaHasta: dateFormatter.date(from: reservaHastaStr)!)
+                            // Append reservation to the equipment object
+                            equipment?.reservas.append(reservationJSON!)
+                        }
                         // Append to the array
                         equipments.append(equipment!)
                     }

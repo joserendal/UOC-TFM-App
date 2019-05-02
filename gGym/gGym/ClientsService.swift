@@ -10,7 +10,7 @@ import Foundation
 
 class ClientsService {
     
-    // Call to the Backend service for creating the User
+    // Call to the Backend service for recovering clients information
     class func getClientsCenter(idCenter: CLong, idUser: CLong) -> [Client] {
         // List of clients to be returned
         var clients = [Client]()
@@ -138,5 +138,49 @@ class ClientsService {
         semaphore.wait()
         // Return the result
         return result
+    }
+    
+    // Call to the Backend service getting information about a client
+    class func getClientInformation(idClient: CLong, idUser: CLong) -> Client {
+        // Client to be returned
+        var client: Client?
+        // Semaphore for controlling execution
+        let semaphore = DispatchSemaphore(value: 0)
+        // Build HTTP Request
+        let request : NSMutableURLRequest = NSMutableURLRequest()
+        request.url = URL(string: Constants.apiHost + Constants.abonadosPath + "/" + String(idClient))
+        request.httpMethod = "GET"
+        request.timeoutInterval = 30
+        // Request headers
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue(String(idUser), forHTTPHeaderField: "idUsuario")
+        // Send request
+        let dataTask = URLSession.shared.dataTask(with: request as URLRequest, completionHandler: {data, response, error in
+            // Get the HTTP Response
+            let httpResponse = response as? HTTPURLResponse
+            // Return true or false
+            if httpResponse?.statusCode == 200{
+                do {
+                    // parse the JSON file
+                    let dictionary = try JSONSerialization.jsonObject(with: data!, options:.allowFragments) as! [String:Any]
+                    // Do configure date formatter
+                    let dateFormatter = DateFormatter()
+                    dateFormatter.dateFormat = "yyyy-MM-dd"
+                    // Build the client
+                    client = Client(nombre: dictionary["nombre"] as! String, apellidos: dictionary["apellidos"] as! String, direccion: dictionary["direccion"] as! String, ciudad: dictionary["ciudad"] as! String, provincia: dictionary["provincia"] as! String, pais: dictionary["pais"] as! String, codigoPostal: dictionary["codigoPostal"] as! String, email: dictionary["email"] as! String, numeroTelefono: dictionary["numeroTelefono"] as! String, fechaNacimiento: dateFormatter.date(from: dictionary["fechaNacimiento"] as! String)!)
+                    client?.idCentroDeportivo = dictionary["idCentroDeportivo"] as! CLong
+                    client?.idAbonado = dictionary["idAbonado"] as! CLong
+                } catch let parseError as NSError {
+                    print("JSON Error \(parseError.localizedDescription)")
+                }
+            }
+            // End semaphore
+            semaphore.signal()
+        })
+        // Execute and wait
+        dataTask.resume()
+        semaphore.wait()
+        // Return the result
+        return client!
     }
 }

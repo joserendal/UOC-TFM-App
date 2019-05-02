@@ -16,21 +16,44 @@ class EquipmentDetailsViewController: UIViewController {
     // Outlets
     @IBOutlet weak var equipmentNameField: UITextField!
     @IBOutlet weak var equipmentDescriptionField: UITextField!
+    @IBOutlet weak var lastReservationsField: UITextView!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewDidLoad()
-        // Create button
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Guardar", style: .plain, target: self, action: #selector(EquipmentDetailsViewController.saveButtonTapped))
-        // In the case we have received any equipment, present it on the screen
-        if(receivedEquipment != nil) {
-            equipmentNameField.text = receivedEquipment?.nombreEquipamiento
-            equipmentDescriptionField.text = receivedEquipment?.descripcionEquipamiento
-        }
         // Recover user information
         let userDefaults: UserDefaults = UserDefaults.standard
         if let data = userDefaults.object(forKey: "credentials") {
             let credentials = NSKeyedUnarchiver.unarchiveObject(with: data as! Data) as? Credentials
             userId = (credentials?.idUsuario)!
+        }
+        if(receivedEquipment == nil) {
+            // Create button
+            navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Guardar", style: .plain, target: self, action: #selector(EquipmentDetailsViewController.saveButtonTapped))
+        }
+        // In the case we have received any equipment, present it on the screen
+        else if(receivedEquipment != nil) {
+            // Create button
+            navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Reservar", style: .plain, target: self, action: #selector(EquipmentDetailsViewController.reservarButtonTapped))
+            // Print equipment name information
+            equipmentNameField.text = receivedEquipment?.nombreEquipamiento
+            equipmentNameField.isEnabled = false
+            // Print equipment description field
+            equipmentDescriptionField.text = receivedEquipment?.descripcionEquipamiento
+            equipmentDescriptionField.isEnabled = false
+            // Print reservations for today
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "HH:mm"
+            lastReservationsField.text = ""
+            // Iterate through list of reservations
+            for reservation in receivedEquipment!.reservas {
+                // Build entry info
+                let reservationHours = dateFormatter.string(from: reservation.reservaDesde) + " - " + dateFormatter.string(from: reservation.reservaHasta)
+                // Get the information about the user of this reservation
+                let client = ClientsService.getClientInformation(idClient: reservation.idAbonado, idUser: userId!)
+                let clientInfo = reservationHours + ": " + client.apellidos + ", " + client.nombre
+                // Append entry to the text box
+                lastReservationsField.text =  lastReservationsField.text! + clientInfo + "\n"
+            }
         }
     }
     
@@ -54,5 +77,16 @@ class EquipmentDetailsViewController: UIViewController {
             }
         }
     }
-
+    
+    // Action 2. Reservar button tapped
+    @IBAction func reservarButtonTapped(_ sender: Any) {
+        self.performSegue(withIdentifier: "presentReservationSegue", sender: receivedEquipment)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "presentReservationSegue" {
+            let detailController = segue.destination as! ReservationViewController
+            detailController.receivedEquipment = (sender as! Equipment)
+        }
+    }
 }

@@ -10,7 +10,6 @@ import Foundation
 
 class Receipt: NSObject {
     
-
     var idAbonado: CLong
     var importe: CDouble
     var periodicidad: String
