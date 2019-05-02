@@ -16,6 +16,9 @@
 		A1254D02226CC42600984EC8 /* ClientDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1254D01226CC42600984EC8 /* ClientDetailsController.swift */; };
 		A13C156522688A0200594668 /* FormValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13C156422688A0200594668 /* FormValidator.swift */; };
 		A13C156722688C3D00594668 /* DialogHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13C156622688C3D00594668 /* DialogHelper.swift */; };
+		A14F8768227B0613004CC699 /* EquipmentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14F8767227B0613004CC699 /* EquipmentListViewController.swift */; };
+		A14F876A227B065E004CC699 /* Equipment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14F8769227B065E004CC699 /* Equipment.swift */; };
+		A14F876C227B0703004CC699 /* EquipmentsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14F876B227B0703004CC699 /* EquipmentsService.swift */; };
 		A15289C62261DBE5008983AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15289C52261DBE5008983AE /* AppDelegate.swift */; };
 		A15289C82261DBE5008983AE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15289C72261DBE5008983AE /* LoginViewController.swift */; };
 		A15289CB2261DBE5008983AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A15289C92261DBE5008983AE /* Main.storyboard */; };
@@ -65,6 +68,9 @@
 		A1254D01226CC42600984EC8 /* ClientDetailsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientDetailsController.swift; sourceTree = "<group>"; };
 		A13C156422688A0200594668 /* FormValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormValidator.swift; sourceTree = "<group>"; };
 		A13C156622688C3D00594668 /* DialogHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogHelper.swift; sourceTree = "<group>"; };
+		A14F8767227B0613004CC699 /* EquipmentListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentListViewController.swift; sourceTree = "<group>"; };
+		A14F8769227B065E004CC699 /* Equipment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Equipment.swift; sourceTree = "<group>"; };
+		A14F876B227B0703004CC699 /* EquipmentsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentsService.swift; sourceTree = "<group>"; };
 		A15289C22261DBE5008983AE /* gGym.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gGym.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A15289C52261DBE5008983AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A15289C72261DBE5008983AE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -192,6 +198,7 @@
 				A1DE0C24226E26E800CB7D66 /* PaymentsViewController.swift */,
 				A1DE0C26226E366B00CB7D66 /* PaymentDetailsViewController.swift */,
 				A11CA21422747D990022F54A /* DateSelectionPopupController.swift */,
+				A14F8767227B0613004CC699 /* EquipmentListViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -206,6 +213,7 @@
 				A1254CFB226C946C00984EC8 /* Client.swift */,
 				A1DE0C20226E22A800CB7D66 /* Payment.swift */,
 				A11CA2102274615E0022F54A /* Receipt.swift */,
+				A14F8769227B065E004CC699 /* Equipment.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -219,6 +227,7 @@
 				A1254CFF226C971B00984EC8 /* ClientsService.swift */,
 				A1DE0C22226E232800CB7D66 /* PaymentsService.swift */,
 				A11CA212227461FD0022F54A /* ReceiptsService.swift */,
+				A14F876B227B0703004CC699 /* EquipmentsService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -361,13 +370,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A14F876C227B0703004CC699 /* EquipmentsService.swift in Sources */,
 				A13C156522688A0200594668 /* FormValidator.swift in Sources */,
 				A15289FC2261ED55008983AE /* Credentials.swift in Sources */,
 				A1254D00226C971B00984EC8 /* ClientsService.swift in Sources */,
 				A1254CFA226C8E9100984EC8 /* ClientsListController.swift in Sources */,
 				A13C156722688C3D00594668 /* DialogHelper.swift in Sources */,
 				A16952872262673200F5F377 /* UserAccountCreationViewController.swift in Sources */,
+				A14F876A227B065E004CC699 /* Equipment.swift in Sources */,
 				A15289C82261DBE5008983AE /* LoginViewController.swift in Sources */,
+				A14F8768227B0613004CC699 /* EquipmentListViewController.swift in Sources */,
 				A1DE0C27226E366B00CB7D66 /* PaymentDetailsViewController.swift in Sources */,
 				A1695285226251E100F5F377 /* MainMenuViewController.swift in Sources */,
 				A19266CE2269034F004E80A3 /* CenterService.swift in Sources */,

@@ -23,5 +23,6 @@ struct Constants  {
     static let pagosPath: String = "/api/pagos"
     // Receipts base path
     static let receiptsPath: String = "/api/cuotas"
-    
+    // Equipments base path
+    static let equipmentsPath: String = "/api/equipamiento"
 }
