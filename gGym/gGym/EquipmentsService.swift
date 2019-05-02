@@ -55,5 +55,38 @@ class EquipmentsService {
         // Return the result
         return equipments
     }
+    
+    // Call to the Backend service for creating a new equipment
+    class func createEquipment(idUser: CLong, equipment: Equipment) -> Bool {
+        // Result of the call
+        var result = false
+        // Semaphore for controlling execution
+        let semaphore = DispatchSemaphore(value: 0)
+        // Build HTTP Request
+        let request : NSMutableURLRequest = NSMutableURLRequest()
+        request.url = URL(string: Constants.apiHost + Constants.equipmentsPath + "/crear")
+        request.httpMethod = "POST"
+        request.timeoutInterval = 30
+        request.httpBody = equipment.jsonRepresentation
+        // Request headers
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue(String(idUser), forHTTPHeaderField: "idUsuario")
+        // Send request
+        let dataTask = URLSession.shared.dataTask(with: request as URLRequest, completionHandler: {data, response, error in
+            // Get the HTTP Response
+            let httpResponse = response as? HTTPURLResponse
+            // Return true or false
+            if httpResponse?.statusCode == 200{
+                result = true
+            }
+            // End semaphore
+            semaphore.signal()
+        })
+        // Execute and wait
+        dataTask.resume()
+        semaphore.wait()
+        // Return the result
+        return result
+    }
 
 }

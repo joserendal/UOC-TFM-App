@@ -16,7 +16,7 @@ class EquipmentListViewController: UITableViewController {
     var userId: CLong?
     var centerId: CLong?
 
-    override func viewDidLoad() {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewDidLoad()
         // Create button
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Crear", style: .plain, target: self, action: #selector(EquipmentListViewController.createButtonTapped))
@@ -60,7 +60,20 @@ class EquipmentListViewController: UITableViewController {
     // Action 1. Create Client button tapped
     @IBAction func createButtonTapped(_ sender: Any) {
         // Send the user to the Main Menu
-        //self.performSegue(withIdentifier: "createClientSegue", sender: self)
+        self.performSegue(withIdentifier: "createEquipmentDetailsSegue", sender: self)
     }
 
+    // ---- ACTIONS ----
+    // User clicked in a row
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedEquipment = equipments[indexPath.row]
+        self.performSegue(withIdentifier: "viewEquipmentDetailsSegue", sender: selectedEquipment)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "viewEquipmentDetailsSegue" {
+            let detailController = segue.destination as! EquipmentDetailsViewController
+            detailController.receivedEquipment = (sender as! Equipment)
+        }
+    }
 }

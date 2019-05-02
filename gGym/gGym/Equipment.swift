@@ -21,4 +21,11 @@ class Equipment: NSObject {
         self.nombreEquipamiento = nombreEquipamiento
         self.descripcionEquipamiento = descripcionEquipamiento
     }
+    
+    var jsonRepresentation : Data {
+        let dict = ["idCentroDeportivo" : String(idCentroDeportivo),
+                    "nombreEquipamiento" : nombreEquipamiento,
+                    "descripcionEquipamiento" : descripcionEquipamiento] as [String : Any]
+        return try! JSONSerialization.data(withJSONObject: dict, options: .prettyPrinted)
+    }
 }

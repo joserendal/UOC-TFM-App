@@ -985,10 +985,10 @@
             </objects>
             <point key="canvasLocation" x="4505.7971014492759" y="958.69565217391312"/>
         </scene>
-        <!--Equipamiento del Centro-->
+        <!--Lista de Equipamiento-->
         <scene sceneID="X9P-X1-gBB">
             <objects>
-                <tableViewController title="Equipamiento del Centro" id="ZjJ-qP-Zma" customClass="EquipmentListViewController" customModule="gGym" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Lista de Equipamiento" id="ZjJ-qP-Zma" customClass="EquipmentListViewController" customModule="gGym" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="kE6-UU-sbT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1026,10 +1026,84 @@
                     </tableView>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="MoP-cs-p2X" kind="show" identifier="createEquipmentDetailsSegue" id="d1P-JF-eoY"/>
+                        <segue destination="MoP-cs-p2X" kind="show" identifier="viewEquipmentDetailsSegue" id="X4X-vW-JgI"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kGD-km-Ezb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3619" y="2447"/>
+        </scene>
+        <!--Equipamiento-->
+        <scene sceneID="Y1i-vt-hjq">
+            <objects>
+                <viewController title="Equipamiento" id="MoP-cs-p2X" customClass="EquipmentDetailsViewController" customModule="gGym" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="a0z-yI-V5I"/>
+                        <viewControllerLayoutGuide type="bottom" id="6Py-9f-ghJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aDx-UH-Xqk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reserva o Modificación de Equipamiento" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xNK-S4-lnD" userLabel="Label Titulo">
+                                <rect key="frame" x="45.666666666666657" y="74" width="323" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TUy-1b-Jur" userLabel="Label Nombre">
+                                <rect key="frame" x="30" y="105" width="354" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Introduzca el nombre del equipamiento" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EtS-WV-dR6" userLabel="Input Nombre Equipamiento">
+                                <rect key="frame" x="30" y="136" width="374" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descripción" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rDS-l3-Nuh" userLabel="Label Descripción">
+                                <rect key="frame" x="30" y="176" width="354" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Introduzca la descripción del equipamiento" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="drk-IU-Bdt" userLabel="Input Descripción Equipamiento">
+                                <rect key="frame" x="30" y="207" width="374" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="TUy-1b-Jur" firstAttribute="leading" secondItem="aDx-UH-Xqk" secondAttribute="leadingMargin" constant="10" id="7PG-OL-dAV"/>
+                            <constraint firstItem="rDS-l3-Nuh" firstAttribute="leading" secondItem="aDx-UH-Xqk" secondAttribute="leadingMargin" constant="10" id="9gG-w8-Irm"/>
+                            <constraint firstItem="xNK-S4-lnD" firstAttribute="centerX" secondItem="aDx-UH-Xqk" secondAttribute="centerX" id="B3h-6c-7N7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TUy-1b-Jur" secondAttribute="trailing" constant="10" id="CrL-Y4-wQ4"/>
+                            <constraint firstItem="rDS-l3-Nuh" firstAttribute="top" secondItem="EtS-WV-dR6" secondAttribute="bottom" constant="10" id="EFe-Br-6Bq"/>
+                            <constraint firstItem="drk-IU-Bdt" firstAttribute="top" secondItem="rDS-l3-Nuh" secondAttribute="bottom" constant="10" id="Lom-Ym-TFX"/>
+                            <constraint firstItem="EtS-WV-dR6" firstAttribute="leading" secondItem="aDx-UH-Xqk" secondAttribute="leadingMargin" constant="10" id="NP3-5X-4xx"/>
+                            <constraint firstItem="xNK-S4-lnD" firstAttribute="top" secondItem="a0z-yI-V5I" secondAttribute="bottom" constant="10" id="Ogv-R5-yCD"/>
+                            <constraint firstItem="EtS-WV-dR6" firstAttribute="top" secondItem="TUy-1b-Jur" secondAttribute="bottom" constant="10" id="V3A-qy-V2A"/>
+                            <constraint firstItem="EtS-WV-dR6" firstAttribute="trailing" secondItem="aDx-UH-Xqk" secondAttribute="trailingMargin" constant="10" id="WFP-On-9Ua"/>
+                            <constraint firstItem="drk-IU-Bdt" firstAttribute="leading" secondItem="aDx-UH-Xqk" secondAttribute="leadingMargin" constant="10" id="eVs-tu-1pV"/>
+                            <constraint firstItem="drk-IU-Bdt" firstAttribute="trailing" secondItem="aDx-UH-Xqk" secondAttribute="trailingMargin" constant="10" id="mgG-Wc-ffb"/>
+                            <constraint firstItem="TUy-1b-Jur" firstAttribute="top" secondItem="xNK-S4-lnD" secondAttribute="bottom" constant="10" id="mnn-66-Dgu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rDS-l3-Nuh" secondAttribute="trailing" constant="10" id="omw-Bn-90m"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="equipmentDescriptionField" destination="drk-IU-Bdt" id="Kfd-mo-Wvq"/>
+                        <outlet property="equipmentNameField" destination="EtS-WV-dR6" id="Mtf-mZ-GOa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tTP-bU-94N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4558" y="2446"/>
         </scene>
         <!--Seleccion de Fechas-->
         <scene sceneID="sVl-eJ-lJB">
@@ -1389,6 +1463,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="rxa-h5-LpE"/>
+        <segue reference="X4X-vW-JgI"/>
         <segue reference="4Zk-gp-Hoo"/>
     </inferredMetricsTieBreakers>
 </document>
