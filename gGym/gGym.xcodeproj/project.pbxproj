@@ -38,6 +38,8 @@
 		A18F162C227CB389004AC737 /* ClientsServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18F162B227CB389004AC737 /* ClientsServiceTest.swift */; };
 		A18F162E227CB961004AC737 /* PaymentsServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18F162D227CB961004AC737 /* PaymentsServiceTest.swift */; };
 		A18F1630227CBC9E004AC737 /* ReceiptsServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18F162F227CBC9E004AC737 /* ReceiptsServiceTest.swift */; };
+		A18F1632227CBE6A004AC737 /* EquipmentsServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18F1631227CBE6A004AC737 /* EquipmentsServiceTest.swift */; };
+		A18F1634227CBF9F004AC737 /* ReservationServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18F1633227CBF9F004AC737 /* ReservationServiceTest.swift */; };
 		A19266C82268F573004E80A3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19266C72268F573004E80A3 /* User.swift */; };
 		A19266CC2268F990004E80A3 /* UsuariosService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19266CB2268F990004E80A3 /* UsuariosService.swift */; };
 		A19266CE2269034F004E80A3 /* CenterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19266CD2269034F004E80A3 /* CenterService.swift */; };
@@ -106,6 +108,8 @@
 		A18F162B227CB389004AC737 /* ClientsServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientsServiceTest.swift; sourceTree = "<group>"; };
 		A18F162D227CB961004AC737 /* PaymentsServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentsServiceTest.swift; sourceTree = "<group>"; };
 		A18F162F227CBC9E004AC737 /* ReceiptsServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptsServiceTest.swift; sourceTree = "<group>"; };
+		A18F1631227CBE6A004AC737 /* EquipmentsServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentsServiceTest.swift; sourceTree = "<group>"; };
+		A18F1633227CBF9F004AC737 /* ReservationServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationServiceTest.swift; sourceTree = "<group>"; };
 		A19266C72268F573004E80A3 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A19266CB2268F990004E80A3 /* UsuariosService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsuariosService.swift; sourceTree = "<group>"; };
 		A19266CD2269034F004E80A3 /* CenterService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterService.swift; sourceTree = "<group>"; };
@@ -274,6 +278,8 @@
 				A18F162B227CB389004AC737 /* ClientsServiceTest.swift */,
 				A18F162D227CB961004AC737 /* PaymentsServiceTest.swift */,
 				A18F162F227CBC9E004AC737 /* ReceiptsServiceTest.swift */,
+				A18F1631227CBE6A004AC737 /* EquipmentsServiceTest.swift */,
+				A18F1633227CBF9F004AC737 /* ReservationServiceTest.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -459,11 +465,13 @@
 			files = (
 				A18F162A227CB19E004AC737 /* CentersServiceTest.swift in Sources */,
 				A18F1623227CA7E8004AC737 /* CredentialsTest.swift in Sources */,
+				A18F1632227CBE6A004AC737 /* EquipmentsServiceTest.swift in Sources */,
 				A18F162C227CB389004AC737 /* ClientsServiceTest.swift in Sources */,
 				A18F1626227CAD9B004AC737 /* CredentialsServiceTest.swift in Sources */,
 				A18F162E227CB961004AC737 /* PaymentsServiceTest.swift in Sources */,
 				A18F1628227CB0D1004AC737 /* UsuariosServiceTest.swift in Sources */,
 				A18F1630227CBC9E004AC737 /* ReceiptsServiceTest.swift in Sources */,
+				A18F1634227CBF9F004AC737 /* ReservationServiceTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

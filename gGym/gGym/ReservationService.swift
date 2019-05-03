@@ -11,7 +11,7 @@ import Foundation
 class ReservationService {
     
     // Call to the Backend service for creating a new reservation for the equipment
-    class func createEquipment(idUser: CLong, reservation: Reservation) -> Bool {
+    class func createReservationForEquipment(idUser: CLong, reservation: Reservation) -> Bool {
         // Result of the call
         var result = false
         // Semaphore for controlling execution

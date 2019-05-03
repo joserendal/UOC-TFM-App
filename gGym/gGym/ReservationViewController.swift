@@ -74,7 +74,7 @@ class ReservationViewController: UIViewController, UIPickerViewDelegate, UIPicke
         // Add the reservation to the received equipment
         receivedEquipment?.reservas.append(reservation!)
         // Call backend service for creating the reservation
-        let result = ReservationService.createEquipment(idUser: userId!, reservation: reservation!)
+        let result = ReservationService.createReservationForEquipment(idUser: userId!, reservation: reservation!)
         if !result {
             // Do display an error message
             DialogHelper.displayErrorDialogWithoutAction(title: "Error", message: "No se ha podido registrar la reserva", button: "Cerrar", callerController: self)
