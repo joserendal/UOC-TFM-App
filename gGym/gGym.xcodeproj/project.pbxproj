@@ -25,13 +25,19 @@
 		A15289CB2261DBE5008983AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A15289C92261DBE5008983AE /* Main.storyboard */; };
 		A15289CD2261DBE5008983AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A15289CC2261DBE5008983AE /* Assets.xcassets */; };
 		A15289D02261DBE5008983AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A15289CE2261DBE5008983AE /* LaunchScreen.storyboard */; };
-		A15289DB2261DBE5008983AE /* gGymTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15289DA2261DBE5008983AE /* gGymTests.swift */; };
 		A15289E62261DBE6008983AE /* gGymUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15289E52261DBE6008983AE /* gGymUITests.swift */; };
 		A15289FC2261ED55008983AE /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15289FB2261ED55008983AE /* Credentials.swift */; };
 		A15289FE2261EE2D008983AE /* CredentialsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15289FD2261EE2D008983AE /* CredentialsService.swift */; };
 		A1528A012261EFCD008983AE /* Costants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1528A002261EFCD008983AE /* Costants.swift */; };
 		A1695285226251E100F5F377 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1695284226251E100F5F377 /* MainMenuViewController.swift */; };
 		A16952872262673200F5F377 /* UserAccountCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16952862262673200F5F377 /* UserAccountCreationViewController.swift */; };
+		A18F1623227CA7E8004AC737 /* CredentialsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18F1622227CA7E8004AC737 /* CredentialsTest.swift */; };
+		A18F1626227CAD9B004AC737 /* CredentialsServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18F1625227CAD9B004AC737 /* CredentialsServiceTest.swift */; };
+		A18F1628227CB0D1004AC737 /* UsuariosServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18F1627227CB0D1004AC737 /* UsuariosServiceTest.swift */; };
+		A18F162A227CB19E004AC737 /* CentersServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18F1629227CB19E004AC737 /* CentersServiceTest.swift */; };
+		A18F162C227CB389004AC737 /* ClientsServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18F162B227CB389004AC737 /* ClientsServiceTest.swift */; };
+		A18F162E227CB961004AC737 /* PaymentsServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18F162D227CB961004AC737 /* PaymentsServiceTest.swift */; };
+		A18F1630227CBC9E004AC737 /* ReceiptsServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18F162F227CBC9E004AC737 /* ReceiptsServiceTest.swift */; };
 		A19266C82268F573004E80A3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19266C72268F573004E80A3 /* User.swift */; };
 		A19266CC2268F990004E80A3 /* UsuariosService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19266CB2268F990004E80A3 /* UsuariosService.swift */; };
 		A19266CE2269034F004E80A3 /* CenterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19266CD2269034F004E80A3 /* CenterService.swift */; };
@@ -84,7 +90,6 @@
 		A15289CF2261DBE5008983AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A15289D12261DBE5008983AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A15289D62261DBE5008983AE /* gGymTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = gGymTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A15289DA2261DBE5008983AE /* gGymTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gGymTests.swift; sourceTree = "<group>"; };
 		A15289DC2261DBE5008983AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A15289E12261DBE5008983AE /* gGymUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = gGymUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A15289E52261DBE6008983AE /* gGymUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gGymUITests.swift; sourceTree = "<group>"; };
@@ -94,6 +99,13 @@
 		A1528A002261EFCD008983AE /* Costants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Costants.swift; sourceTree = "<group>"; };
 		A1695284226251E100F5F377 /* MainMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 		A16952862262673200F5F377 /* UserAccountCreationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccountCreationViewController.swift; sourceTree = "<group>"; };
+		A18F1622227CA7E8004AC737 /* CredentialsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsTest.swift; sourceTree = "<group>"; };
+		A18F1625227CAD9B004AC737 /* CredentialsServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsServiceTest.swift; sourceTree = "<group>"; };
+		A18F1627227CB0D1004AC737 /* UsuariosServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsuariosServiceTest.swift; sourceTree = "<group>"; };
+		A18F1629227CB19E004AC737 /* CentersServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentersServiceTest.swift; sourceTree = "<group>"; };
+		A18F162B227CB389004AC737 /* ClientsServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientsServiceTest.swift; sourceTree = "<group>"; };
+		A18F162D227CB961004AC737 /* PaymentsServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentsServiceTest.swift; sourceTree = "<group>"; };
+		A18F162F227CBC9E004AC737 /* ReceiptsServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptsServiceTest.swift; sourceTree = "<group>"; };
 		A19266C72268F573004E80A3 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A19266CB2268F990004E80A3 /* UsuariosService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsuariosService.swift; sourceTree = "<group>"; };
 		A19266CD2269034F004E80A3 /* CenterService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterService.swift; sourceTree = "<group>"; };
@@ -180,7 +192,8 @@
 		A15289D92261DBE5008983AE /* gGymTests */ = {
 			isa = PBXGroup;
 			children = (
-				A15289DA2261DBE5008983AE /* gGymTests.swift */,
+				A18F1624227CAD63004AC737 /* Services */,
+				A18F1621227CA7D5004AC737 /* Model */,
 				A15289DC2261DBE5008983AE /* Info.plist */,
 			);
 			path = gGymTests;
@@ -242,6 +255,27 @@
 				A1AC3D28227B79E600509A44 /* ReservationService.swift */,
 			);
 			name = Services;
+			sourceTree = "<group>";
+		};
+		A18F1621227CA7D5004AC737 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A18F1622227CA7E8004AC737 /* CredentialsTest.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A18F1624227CAD63004AC737 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A18F1625227CAD9B004AC737 /* CredentialsServiceTest.swift */,
+				A18F1627227CB0D1004AC737 /* UsuariosServiceTest.swift */,
+				A18F1629227CB19E004AC737 /* CentersServiceTest.swift */,
+				A18F162B227CB389004AC737 /* ClientsServiceTest.swift */,
+				A18F162D227CB961004AC737 /* PaymentsServiceTest.swift */,
+				A18F162F227CBC9E004AC737 /* ReceiptsServiceTest.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,17 +346,20 @@
 				TargetAttributes = {
 					A15289C12261DBE5008983AE = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = "Jose Enrique Álvarez Rendal";
 						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 					A15289D52261DBE5008983AE = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = "Jose Enrique Álvarez Rendal";
 						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 						TestTargetID = A15289C12261DBE5008983AE;
 					};
 					A15289E02261DBE5008983AE = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = "Jose Enrique Álvarez Rendal";
 						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 						TestTargetID = A15289C12261DBE5008983AE;
@@ -420,7 +457,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A15289DB2261DBE5008983AE /* gGymTests.swift in Sources */,
+				A18F162A227CB19E004AC737 /* CentersServiceTest.swift in Sources */,
+				A18F1623227CA7E8004AC737 /* CredentialsTest.swift in Sources */,
+				A18F162C227CB389004AC737 /* ClientsServiceTest.swift in Sources */,
+				A18F1626227CAD9B004AC737 /* CredentialsServiceTest.swift in Sources */,
+				A18F162E227CB961004AC737 /* PaymentsServiceTest.swift in Sources */,
+				A18F1628227CB0D1004AC737 /* UsuariosServiceTest.swift in Sources */,
+				A18F1630227CBC9E004AC737 /* ReceiptsServiceTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,6 +535,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "Jose Enrique Álvarez Rendal";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -544,6 +588,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "Jose Enrique Álvarez Rendal";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;

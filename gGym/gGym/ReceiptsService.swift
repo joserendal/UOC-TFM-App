@@ -46,7 +46,7 @@ class ReceiptsService {
     // Call to the Backend service for getting the receipt asociated to a given user
     class func getReceiptForUser(idUser: CLong, idClient: CLong) -> Receipt {
         // List of payments to be returned
-        let receipt = Receipt(idAbonado: idUser, importe: 0, periodicidad: "")
+        let receipt = Receipt(idAbonado: idClient, importe: 0, periodicidad: "")
         // Semaphore for controlling execution
         let semaphore = DispatchSemaphore(value: 0)
         // Build HTTP Request
