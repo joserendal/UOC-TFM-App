@@ -25,7 +25,6 @@
 		A15289CB2261DBE5008983AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A15289C92261DBE5008983AE /* Main.storyboard */; };
 		A15289CD2261DBE5008983AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A15289CC2261DBE5008983AE /* Assets.xcassets */; };
 		A15289D02261DBE5008983AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A15289CE2261DBE5008983AE /* LaunchScreen.storyboard */; };
-		A15289E62261DBE6008983AE /* gGymUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15289E52261DBE6008983AE /* gGymUITests.swift */; };
 		A15289FC2261ED55008983AE /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15289FB2261ED55008983AE /* Credentials.swift */; };
 		A15289FE2261EE2D008983AE /* CredentialsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15289FD2261EE2D008983AE /* CredentialsService.swift */; };
 		A1528A012261EFCD008983AE /* Costants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1528A002261EFCD008983AE /* Costants.swift */; };
@@ -47,6 +46,7 @@
 		A1AC3D25227B5A0500509A44 /* Reservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AC3D24227B5A0500509A44 /* Reservation.swift */; };
 		A1AC3D27227B679B00509A44 /* ReservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AC3D26227B679B00509A44 /* ReservationViewController.swift */; };
 		A1AC3D29227B79E600509A44 /* ReservationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AC3D28227B79E600509A44 /* ReservationService.swift */; };
+		A1CBF82F227DB0B7001CA8AF /* LoginControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CBF82E227DB0B7001CA8AF /* LoginControllerTest.swift */; };
 		A1DE0C21226E22A800CB7D66 /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DE0C20226E22A800CB7D66 /* Payment.swift */; };
 		A1DE0C23226E232800CB7D66 /* PaymentsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DE0C22226E232800CB7D66 /* PaymentsService.swift */; };
 		A1DE0C25226E26E800CB7D66 /* PaymentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DE0C24226E26E800CB7D66 /* PaymentsViewController.swift */; };
@@ -94,7 +94,6 @@
 		A15289D62261DBE5008983AE /* gGymTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = gGymTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A15289DC2261DBE5008983AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A15289E12261DBE5008983AE /* gGymUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = gGymUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A15289E52261DBE6008983AE /* gGymUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gGymUITests.swift; sourceTree = "<group>"; };
 		A15289E72261DBE6008983AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A15289FB2261ED55008983AE /* Credentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		A15289FD2261EE2D008983AE /* CredentialsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CredentialsService.swift; sourceTree = "<group>"; };
@@ -117,6 +116,7 @@
 		A1AC3D24227B5A0500509A44 /* Reservation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reservation.swift; sourceTree = "<group>"; };
 		A1AC3D26227B679B00509A44 /* ReservationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationViewController.swift; sourceTree = "<group>"; };
 		A1AC3D28227B79E600509A44 /* ReservationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationService.swift; sourceTree = "<group>"; };
+		A1CBF82E227DB0B7001CA8AF /* LoginControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginControllerTest.swift; sourceTree = "<group>"; };
 		A1DE0C20226E22A800CB7D66 /* Payment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
 		A1DE0C22226E232800CB7D66 /* PaymentsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentsService.swift; sourceTree = "<group>"; };
 		A1DE0C24226E26E800CB7D66 /* PaymentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentsViewController.swift; sourceTree = "<group>"; };
@@ -206,7 +206,7 @@
 		A15289E42261DBE6008983AE /* gGymUITests */ = {
 			isa = PBXGroup;
 			children = (
-				A15289E52261DBE6008983AE /* gGymUITests.swift */,
+				A1CBF82D227DB021001CA8AF /* Controllers */,
 				A15289E72261DBE6008983AE /* Info.plist */,
 			);
 			path = gGymUITests;
@@ -282,6 +282,14 @@
 				A18F1633227CBF9F004AC737 /* ReservationServiceTest.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		A1CBF82D227DB021001CA8AF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A1CBF82E227DB0B7001CA8AF /* LoginControllerTest.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -479,7 +487,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A15289E62261DBE6008983AE /* gGymUITests.swift in Sources */,
+				A1CBF82F227DB0B7001CA8AF /* LoginControllerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
