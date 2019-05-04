@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     
     // Outlets
     @IBOutlet weak var usernameField: UITextField!
@@ -27,6 +27,14 @@ class LoginViewController: UIViewController {
             usernameField.text = credentials?.email
             passwordField.text = credentials?.password
         }
+        // Set deletegates for text field
+        self.usernameField.delegate = self
+        self.passwordField.delegate = self
+    }
+    
+    // When the user clicks outside text fields, hide the keyboard
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
     
     @IBAction func loginTapped(_ sender: UIButton) {
