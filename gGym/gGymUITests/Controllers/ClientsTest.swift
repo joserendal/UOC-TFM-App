@@ -21,8 +21,7 @@ class ClientsTest: XCTestCase {
     
     // Test the update of a client in the system
     func testUpdateClient() {
-        var random = Int.random(in: 0 ... 10000)
-        
+        let random = Int.random(in: 0 ... 10000)
         // Launch application
         let app = XCUIApplication()
         // Login into the application
