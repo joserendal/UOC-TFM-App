@@ -46,7 +46,10 @@
 		A1AC3D25227B5A0500509A44 /* Reservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AC3D24227B5A0500509A44 /* Reservation.swift */; };
 		A1AC3D27227B679B00509A44 /* ReservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AC3D26227B679B00509A44 /* ReservationViewController.swift */; };
 		A1AC3D29227B79E600509A44 /* ReservationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AC3D28227B79E600509A44 /* ReservationService.swift */; };
-		A1CBF82F227DB0B7001CA8AF /* LoginControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CBF82E227DB0B7001CA8AF /* LoginControllerTest.swift */; };
+		A1CBF82F227DB0B7001CA8AF /* LoginTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CBF82E227DB0B7001CA8AF /* LoginTest.swift */; };
+		A1CBF833227DC5A7001CA8AF /* UserAccountCreationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CBF832227DC5A7001CA8AF /* UserAccountCreationTest.swift */; };
+		A1CE2E96227E03BE0072B9EB /* EquipmentTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CE2E95227E03BE0072B9EB /* EquipmentTest.swift */; };
+		A1CE2E98227E0A330072B9EB /* ClientsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CE2E97227E0A330072B9EB /* ClientsTest.swift */; };
 		A1DE0C21226E22A800CB7D66 /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DE0C20226E22A800CB7D66 /* Payment.swift */; };
 		A1DE0C23226E232800CB7D66 /* PaymentsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DE0C22226E232800CB7D66 /* PaymentsService.swift */; };
 		A1DE0C25226E26E800CB7D66 /* PaymentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DE0C24226E26E800CB7D66 /* PaymentsViewController.swift */; };
@@ -116,7 +119,10 @@
 		A1AC3D24227B5A0500509A44 /* Reservation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reservation.swift; sourceTree = "<group>"; };
 		A1AC3D26227B679B00509A44 /* ReservationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationViewController.swift; sourceTree = "<group>"; };
 		A1AC3D28227B79E600509A44 /* ReservationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationService.swift; sourceTree = "<group>"; };
-		A1CBF82E227DB0B7001CA8AF /* LoginControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginControllerTest.swift; sourceTree = "<group>"; };
+		A1CBF82E227DB0B7001CA8AF /* LoginTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTest.swift; sourceTree = "<group>"; };
+		A1CBF832227DC5A7001CA8AF /* UserAccountCreationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountCreationTest.swift; sourceTree = "<group>"; };
+		A1CE2E95227E03BE0072B9EB /* EquipmentTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentTest.swift; sourceTree = "<group>"; };
+		A1CE2E97227E0A330072B9EB /* ClientsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientsTest.swift; sourceTree = "<group>"; };
 		A1DE0C20226E22A800CB7D66 /* Payment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
 		A1DE0C22226E232800CB7D66 /* PaymentsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentsService.swift; sourceTree = "<group>"; };
 		A1DE0C24226E26E800CB7D66 /* PaymentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentsViewController.swift; sourceTree = "<group>"; };
@@ -287,7 +293,10 @@
 		A1CBF82D227DB021001CA8AF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				A1CBF82E227DB0B7001CA8AF /* LoginControllerTest.swift */,
+				A1CBF82E227DB0B7001CA8AF /* LoginTest.swift */,
+				A1CBF832227DC5A7001CA8AF /* UserAccountCreationTest.swift */,
+				A1CE2E95227E03BE0072B9EB /* EquipmentTest.swift */,
+				A1CE2E97227E0A330072B9EB /* ClientsTest.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -487,7 +496,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1CBF82F227DB0B7001CA8AF /* LoginControllerTest.swift in Sources */,
+				A1CBF833227DC5A7001CA8AF /* UserAccountCreationTest.swift in Sources */,
+				A1CBF82F227DB0B7001CA8AF /* LoginTest.swift in Sources */,
+				A1CE2E98227E0A330072B9EB /* ClientsTest.swift in Sources */,
+				A1CE2E96227E03BE0072B9EB /* EquipmentTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

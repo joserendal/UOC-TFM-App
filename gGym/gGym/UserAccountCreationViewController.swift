@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UserAccountCreationViewController : UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class UserAccountCreationViewController : UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     
     // Progressbar
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
@@ -65,6 +65,29 @@ class UserAccountCreationViewController : UIViewController, UIPickerViewDelegate
         // Clean delegate
         centerTypeField.delegate = self
         centerTypeField.dataSource = self
+        // Delegates for text fields
+        nameField.delegate = self
+        surnameField.delegate = self
+        zipCodeFeld.delegate = self
+        cityField.delegate = self
+        provinceField.delegate = self
+        stateField.delegate = self
+        centerNameField.delegate = self
+        centerAddressField.delegate = self
+        centerCityField.delegate = self
+        centerProvinceField.delegate = self
+        centerCountryField.delegate = self
+        centerZipCodeField.delegate = self
+        centerPhoneNumberField.delegate = self
+        centerEmailField.delegate = self
+        userEmailField.delegate = self
+        userPassword1Field.delegate = self
+       userPassword2Field.delegate = self
+    }
+    
+    // When the user clicks outside text fields, hide the keyboard
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
     
     // Number of picker views in the view

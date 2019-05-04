@@ -9,7 +9,7 @@
 import XCTest
 @testable import gGym
 
-class LoginControllerTest: XCTestCase {
+class LoginTest: XCTestCase {
     
     override func setUp() {
         super.setUp()
