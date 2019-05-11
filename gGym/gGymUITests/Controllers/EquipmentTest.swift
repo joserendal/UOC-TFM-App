@@ -57,9 +57,8 @@ class EquipmentTest: XCTestCase {
         // Hit save button
         app.navigationBars["Equipamiento"].buttons["Guardar"].tap()
         // Click in the cell containing the equipment created
-        tablesQuery.cells.containing(.staticText, identifier:"AA Equipamiento " + String(random)).children(matching: .staticText).matching(identifier: "AA Equipamiento " + String(random)).element(boundBy: 0).swipeRight()
+        tablesQuery.cells.containing(.staticText, identifier:"AA Equipamiento " + String(random)).children(matching: .staticText).matching(identifier: "AA Equipamiento " + String(random)).element(boundBy: 0).tap()
         // Asserts
-        introduzcaElNombreDelEquipamientoTextField.tap()
         XCTAssertEqual(introduzcaElNombreDelEquipamientoTextField.value as! String, "AA Equipamiento " + String(random))
         XCTAssertEqual(introduzcaLaDescripciNDelEquipamientoTextField.value as! String, "AA Descripción del equipamiento " + String(random))
     }
