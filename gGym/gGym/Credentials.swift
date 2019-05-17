@@ -28,7 +28,7 @@ class Credentials: NSObject, NSCoding {
     }
     
     var jsonRepresentation : Data {
-        let dict = ["email" : email, "password" : password]
+        let dict = ["idUsuario": idUsuario, "email" : email, "password" : password] as [String : Any]
         return try! JSONSerialization.data(withJSONObject: dict, options: .prettyPrinted)
     }
     
