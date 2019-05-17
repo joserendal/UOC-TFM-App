@@ -1,0 +1,764 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A11CA2112274615E0022F54A /* Receipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11CA2102274615E0022F54A /* Receipt.swift */; };
+		A11CA213227461FD0022F54A /* ReceiptsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11CA212227461FD0022F54A /* ReceiptsService.swift */; };
+		A11CA21522747D990022F54A /* DateSelectionPopupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11CA21422747D990022F54A /* DateSelectionPopupController.swift */; };
+		A1254CFA226C8E9100984EC8 /* ClientsListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1254CF9226C8E9100984EC8 /* ClientsListController.swift */; };
+		A1254CFC226C946C00984EC8 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1254CFB226C946C00984EC8 /* Client.swift */; };
+		A1254D00226C971B00984EC8 /* ClientsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1254CFF226C971B00984EC8 /* ClientsService.swift */; };
+		A1254D02226CC42600984EC8 /* ClientDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1254D01226CC42600984EC8 /* ClientDetailsController.swift */; };
+		A13C156522688A0200594668 /* FormValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13C156422688A0200594668 /* FormValidator.swift */; };
+		A13C156722688C3D00594668 /* DialogHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13C156622688C3D00594668 /* DialogHelper.swift */; };
+		A14F8768227B0613004CC699 /* EquipmentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14F8767227B0613004CC699 /* EquipmentListViewController.swift */; };
+		A14F876A227B065E004CC699 /* Equipment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14F8769227B065E004CC699 /* Equipment.swift */; };
+		A14F876C227B0703004CC699 /* EquipmentsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14F876B227B0703004CC699 /* EquipmentsService.swift */; };
+		A14F876E227B1357004CC699 /* EquipmentDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14F876D227B1357004CC699 /* EquipmentDetailsViewController.swift */; };
+		A15289C62261DBE5008983AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15289C52261DBE5008983AE /* AppDelegate.swift */; };
+		A15289C82261DBE5008983AE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15289C72261DBE5008983AE /* LoginViewController.swift */; };
+		A15289CB2261DBE5008983AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A15289C92261DBE5008983AE /* Main.storyboard */; };
+		A15289CD2261DBE5008983AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A15289CC2261DBE5008983AE /* Assets.xcassets */; };
+		A15289D02261DBE5008983AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A15289CE2261DBE5008983AE /* LaunchScreen.storyboard */; };
+		A15289FC2261ED55008983AE /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15289FB2261ED55008983AE /* Credentials.swift */; };
+		A15289FE2261EE2D008983AE /* CredentialsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15289FD2261EE2D008983AE /* CredentialsService.swift */; };
+		A1528A012261EFCD008983AE /* Costants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1528A002261EFCD008983AE /* Costants.swift */; };
+		A1695285226251E100F5F377 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1695284226251E100F5F377 /* MainMenuViewController.swift */; };
+		A16952872262673200F5F377 /* UserAccountCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16952862262673200F5F377 /* UserAccountCreationViewController.swift */; };
+		A18F1623227CA7E8004AC737 /* CredentialsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18F1622227CA7E8004AC737 /* CredentialsTest.swift */; };
+		A18F1626227CAD9B004AC737 /* CredentialsServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18F1625227CAD9B004AC737 /* CredentialsServiceTest.swift */; };
+		A18F1628227CB0D1004AC737 /* UsuariosServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18F1627227CB0D1004AC737 /* UsuariosServiceTest.swift */; };
+		A18F162A227CB19E004AC737 /* CentersServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18F1629227CB19E004AC737 /* CentersServiceTest.swift */; };
+		A18F162C227CB389004AC737 /* ClientsServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18F162B227CB389004AC737 /* ClientsServiceTest.swift */; };
+		A18F162E227CB961004AC737 /* PaymentsServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18F162D227CB961004AC737 /* PaymentsServiceTest.swift */; };
+		A18F1630227CBC9E004AC737 /* ReceiptsServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18F162F227CBC9E004AC737 /* ReceiptsServiceTest.swift */; };
+		A18F1632227CBE6A004AC737 /* EquipmentsServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18F1631227CBE6A004AC737 /* EquipmentsServiceTest.swift */; };
+		A18F1634227CBF9F004AC737 /* ReservationServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18F1633227CBF9F004AC737 /* ReservationServiceTest.swift */; };
+		A19266C82268F573004E80A3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19266C72268F573004E80A3 /* User.swift */; };
+		A19266CC2268F990004E80A3 /* UsuariosService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19266CB2268F990004E80A3 /* UsuariosService.swift */; };
+		A19266CE2269034F004E80A3 /* CenterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19266CD2269034F004E80A3 /* CenterService.swift */; };
+		A19266D0226903E3004E80A3 /* Center.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19266CF226903E3004E80A3 /* Center.swift */; };
+		A1AC3D25227B5A0500509A44 /* Reservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AC3D24227B5A0500509A44 /* Reservation.swift */; };
+		A1AC3D27227B679B00509A44 /* ReservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AC3D26227B679B00509A44 /* ReservationViewController.swift */; };
+		A1AC3D29227B79E600509A44 /* ReservationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AC3D28227B79E600509A44 /* ReservationService.swift */; };
+		A1CBF82F227DB0B7001CA8AF /* LoginTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CBF82E227DB0B7001CA8AF /* LoginTest.swift */; };
+		A1CBF833227DC5A7001CA8AF /* UserAccountCreationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CBF832227DC5A7001CA8AF /* UserAccountCreationTest.swift */; };
+		A1CE2E96227E03BE0072B9EB /* EquipmentTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CE2E95227E03BE0072B9EB /* EquipmentTest.swift */; };
+		A1CE2E98227E0A330072B9EB /* ClientsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CE2E97227E0A330072B9EB /* ClientsTest.swift */; };
+		A1CE2E9C227E0D2B0072B9EB /* PaymentsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CE2E9B227E0D2B0072B9EB /* PaymentsTest.swift */; };
+		A1DE0C21226E22A800CB7D66 /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DE0C20226E22A800CB7D66 /* Payment.swift */; };
+		A1DE0C23226E232800CB7D66 /* PaymentsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DE0C22226E232800CB7D66 /* PaymentsService.swift */; };
+		A1DE0C25226E26E800CB7D66 /* PaymentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DE0C24226E26E800CB7D66 /* PaymentsViewController.swift */; };
+		A1DE0C27226E366B00CB7D66 /* PaymentDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DE0C26226E366B00CB7D66 /* PaymentDetailsViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A15289D72261DBE5008983AE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A15289BA2261DBE5008983AE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A15289C12261DBE5008983AE;
+			remoteInfo = gGym;
+		};
+		A15289E22261DBE5008983AE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A15289BA2261DBE5008983AE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A15289C12261DBE5008983AE;
+			remoteInfo = gGym;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A11CA2102274615E0022F54A /* Receipt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Receipt.swift; sourceTree = "<group>"; };
+		A11CA212227461FD0022F54A /* ReceiptsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiptsService.swift; sourceTree = "<group>"; };
+		A11CA21422747D990022F54A /* DateSelectionPopupController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateSelectionPopupController.swift; sourceTree = "<group>"; };
+		A1254CF9226C8E9100984EC8 /* ClientsListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientsListController.swift; sourceTree = "<group>"; };
+		A1254CFB226C946C00984EC8 /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		A1254CFF226C971B00984EC8 /* ClientsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientsService.swift; sourceTree = "<group>"; };
+		A1254D01226CC42600984EC8 /* ClientDetailsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientDetailsController.swift; sourceTree = "<group>"; };
+		A13C156422688A0200594668 /* FormValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormValidator.swift; sourceTree = "<group>"; };
+		A13C156622688C3D00594668 /* DialogHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogHelper.swift; sourceTree = "<group>"; };
+		A14F8767227B0613004CC699 /* EquipmentListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentListViewController.swift; sourceTree = "<group>"; };
+		A14F8769227B065E004CC699 /* Equipment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Equipment.swift; sourceTree = "<group>"; };
+		A14F876B227B0703004CC699 /* EquipmentsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentsService.swift; sourceTree = "<group>"; };
+		A14F876D227B1357004CC699 /* EquipmentDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentDetailsViewController.swift; sourceTree = "<group>"; };
+		A15289C22261DBE5008983AE /* gGym.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gGym.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A15289C52261DBE5008983AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A15289C72261DBE5008983AE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A15289CA2261DBE5008983AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A15289CC2261DBE5008983AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A15289CF2261DBE5008983AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A15289D12261DBE5008983AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A15289D62261DBE5008983AE /* gGymTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = gGymTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A15289DC2261DBE5008983AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A15289E12261DBE5008983AE /* gGymUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = gGymUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A15289E72261DBE6008983AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A15289FB2261ED55008983AE /* Credentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
+		A15289FD2261EE2D008983AE /* CredentialsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CredentialsService.swift; sourceTree = "<group>"; };
+		A1528A002261EFCD008983AE /* Costants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Costants.swift; sourceTree = "<group>"; };
+		A1695284226251E100F5F377 /* MainMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
+		A16952862262673200F5F377 /* UserAccountCreationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccountCreationViewController.swift; sourceTree = "<group>"; };
+		A18F1622227CA7E8004AC737 /* CredentialsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsTest.swift; sourceTree = "<group>"; };
+		A18F1625227CAD9B004AC737 /* CredentialsServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsServiceTest.swift; sourceTree = "<group>"; };
+		A18F1627227CB0D1004AC737 /* UsuariosServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsuariosServiceTest.swift; sourceTree = "<group>"; };
+		A18F1629227CB19E004AC737 /* CentersServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentersServiceTest.swift; sourceTree = "<group>"; };
+		A18F162B227CB389004AC737 /* ClientsServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientsServiceTest.swift; sourceTree = "<group>"; };
+		A18F162D227CB961004AC737 /* PaymentsServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentsServiceTest.swift; sourceTree = "<group>"; };
+		A18F162F227CBC9E004AC737 /* ReceiptsServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptsServiceTest.swift; sourceTree = "<group>"; };
+		A18F1631227CBE6A004AC737 /* EquipmentsServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentsServiceTest.swift; sourceTree = "<group>"; };
+		A18F1633227CBF9F004AC737 /* ReservationServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationServiceTest.swift; sourceTree = "<group>"; };
+		A19266C72268F573004E80A3 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		A19266CB2268F990004E80A3 /* UsuariosService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsuariosService.swift; sourceTree = "<group>"; };
+		A19266CD2269034F004E80A3 /* CenterService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterService.swift; sourceTree = "<group>"; };
+		A19266CF226903E3004E80A3 /* Center.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Center.swift; sourceTree = "<group>"; };
+		A1AC3D24227B5A0500509A44 /* Reservation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reservation.swift; sourceTree = "<group>"; };
+		A1AC3D26227B679B00509A44 /* ReservationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationViewController.swift; sourceTree = "<group>"; };
+		A1AC3D28227B79E600509A44 /* ReservationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationService.swift; sourceTree = "<group>"; };
+		A1CBF82E227DB0B7001CA8AF /* LoginTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTest.swift; sourceTree = "<group>"; };
+		A1CBF832227DC5A7001CA8AF /* UserAccountCreationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountCreationTest.swift; sourceTree = "<group>"; };
+		A1CE2E95227E03BE0072B9EB /* EquipmentTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentTest.swift; sourceTree = "<group>"; };
+		A1CE2E97227E0A330072B9EB /* ClientsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientsTest.swift; sourceTree = "<group>"; };
+		A1CE2E9B227E0D2B0072B9EB /* PaymentsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentsTest.swift; sourceTree = "<group>"; };
+		A1DE0C20226E22A800CB7D66 /* Payment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
+		A1DE0C22226E232800CB7D66 /* PaymentsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentsService.swift; sourceTree = "<group>"; };
+		A1DE0C24226E26E800CB7D66 /* PaymentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentsViewController.swift; sourceTree = "<group>"; };
+		A1DE0C26226E366B00CB7D66 /* PaymentDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentDetailsViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A15289BF2261DBE5008983AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A15289D32261DBE5008983AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A15289DE2261DBE5008983AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A13C1563226889E900594668 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A13C156422688A0200594668 /* FormValidator.swift */,
+				A13C156622688C3D00594668 /* DialogHelper.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		A15289B92261DBE5008983AE = {
+			isa = PBXGroup;
+			children = (
+				A15289C42261DBE5008983AE /* gGym */,
+				A15289D92261DBE5008983AE /* gGymTests */,
+				A15289E42261DBE6008983AE /* gGymUITests */,
+				A15289C32261DBE5008983AE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A15289C32261DBE5008983AE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A15289C22261DBE5008983AE /* gGym.app */,
+				A15289D62261DBE5008983AE /* gGymTests.xctest */,
+				A15289E12261DBE5008983AE /* gGymUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A15289C42261DBE5008983AE /* gGym */ = {
+			isa = PBXGroup;
+			children = (
+				A13C1563226889E900594668 /* Utilities */,
+				A15289F72261ECCA008983AE /* Services */,
+				A15289F62261ECC5008983AE /* Model */,
+				A15289F32261DC0F008983AE /* Controllers */,
+				A15289C52261DBE5008983AE /* AppDelegate.swift */,
+				A15289C92261DBE5008983AE /* Main.storyboard */,
+				A15289CC2261DBE5008983AE /* Assets.xcassets */,
+				A15289CE2261DBE5008983AE /* LaunchScreen.storyboard */,
+				A15289D12261DBE5008983AE /* Info.plist */,
+			);
+			path = gGym;
+			sourceTree = "<group>";
+		};
+		A15289D92261DBE5008983AE /* gGymTests */ = {
+			isa = PBXGroup;
+			children = (
+				A18F1624227CAD63004AC737 /* Services */,
+				A18F1621227CA7D5004AC737 /* Model */,
+				A15289DC2261DBE5008983AE /* Info.plist */,
+			);
+			path = gGymTests;
+			sourceTree = "<group>";
+		};
+		A15289E42261DBE6008983AE /* gGymUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A1CBF82D227DB021001CA8AF /* Controllers */,
+				A15289E72261DBE6008983AE /* Info.plist */,
+			);
+			path = gGymUITests;
+			sourceTree = "<group>";
+		};
+		A15289F32261DC0F008983AE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A1254D01226CC42600984EC8 /* ClientDetailsController.swift */,
+				A15289C72261DBE5008983AE /* LoginViewController.swift */,
+				A1695284226251E100F5F377 /* MainMenuViewController.swift */,
+				A16952862262673200F5F377 /* UserAccountCreationViewController.swift */,
+				A1254CF9226C8E9100984EC8 /* ClientsListController.swift */,
+				A1DE0C24226E26E800CB7D66 /* PaymentsViewController.swift */,
+				A1DE0C26226E366B00CB7D66 /* PaymentDetailsViewController.swift */,
+				A11CA21422747D990022F54A /* DateSelectionPopupController.swift */,
+				A14F8767227B0613004CC699 /* EquipmentListViewController.swift */,
+				A14F876D227B1357004CC699 /* EquipmentDetailsViewController.swift */,
+				A1AC3D26227B679B00509A44 /* ReservationViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		A15289F62261ECC5008983AE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A15289FB2261ED55008983AE /* Credentials.swift */,
+				A1528A002261EFCD008983AE /* Costants.swift */,
+				A19266C72268F573004E80A3 /* User.swift */,
+				A19266CF226903E3004E80A3 /* Center.swift */,
+				A1254CFB226C946C00984EC8 /* Client.swift */,
+				A1DE0C20226E22A800CB7D66 /* Payment.swift */,
+				A11CA2102274615E0022F54A /* Receipt.swift */,
+				A14F8769227B065E004CC699 /* Equipment.swift */,
+				A1AC3D24227B5A0500509A44 /* Reservation.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		A15289F72261ECCA008983AE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A15289FD2261EE2D008983AE /* CredentialsService.swift */,
+				A19266CB2268F990004E80A3 /* UsuariosService.swift */,
+				A19266CD2269034F004E80A3 /* CenterService.swift */,
+				A1254CFF226C971B00984EC8 /* ClientsService.swift */,
+				A1DE0C22226E232800CB7D66 /* PaymentsService.swift */,
+				A11CA212227461FD0022F54A /* ReceiptsService.swift */,
+				A14F876B227B0703004CC699 /* EquipmentsService.swift */,
+				A1AC3D28227B79E600509A44 /* ReservationService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		A18F1621227CA7D5004AC737 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A18F1622227CA7E8004AC737 /* CredentialsTest.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A18F1624227CAD63004AC737 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A18F1625227CAD9B004AC737 /* CredentialsServiceTest.swift */,
+				A18F1627227CB0D1004AC737 /* UsuariosServiceTest.swift */,
+				A18F1629227CB19E004AC737 /* CentersServiceTest.swift */,
+				A18F162B227CB389004AC737 /* ClientsServiceTest.swift */,
+				A18F162D227CB961004AC737 /* PaymentsServiceTest.swift */,
+				A18F162F227CBC9E004AC737 /* ReceiptsServiceTest.swift */,
+				A18F1631227CBE6A004AC737 /* EquipmentsServiceTest.swift */,
+				A18F1633227CBF9F004AC737 /* ReservationServiceTest.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A1CBF82D227DB021001CA8AF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A1CBF82E227DB0B7001CA8AF /* LoginTest.swift */,
+				A1CBF832227DC5A7001CA8AF /* UserAccountCreationTest.swift */,
+				A1CE2E95227E03BE0072B9EB /* EquipmentTest.swift */,
+				A1CE2E97227E0A330072B9EB /* ClientsTest.swift */,
+				A1CE2E9B227E0D2B0072B9EB /* PaymentsTest.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A15289C12261DBE5008983AE /* gGym */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A15289EA2261DBE6008983AE /* Build configuration list for PBXNativeTarget "gGym" */;
+			buildPhases = (
+				A15289BE2261DBE5008983AE /* Sources */,
+				A15289BF2261DBE5008983AE /* Frameworks */,
+				A15289C02261DBE5008983AE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = gGym;
+			productName = gGym;
+			productReference = A15289C22261DBE5008983AE /* gGym.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A15289D52261DBE5008983AE /* gGymTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A15289ED2261DBE6008983AE /* Build configuration list for PBXNativeTarget "gGymTests" */;
+			buildPhases = (
+				A15289D22261DBE5008983AE /* Sources */,
+				A15289D32261DBE5008983AE /* Frameworks */,
+				A15289D42261DBE5008983AE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A15289D82261DBE5008983AE /* PBXTargetDependency */,
+			);
+			name = gGymTests;
+			productName = gGymTests;
+			productReference = A15289D62261DBE5008983AE /* gGymTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A15289E02261DBE5008983AE /* gGymUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A15289F02261DBE6008983AE /* Build configuration list for PBXNativeTarget "gGymUITests" */;
+			buildPhases = (
+				A15289DD2261DBE5008983AE /* Sources */,
+				A15289DE2261DBE5008983AE /* Frameworks */,
+				A15289DF2261DBE5008983AE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A15289E32261DBE5008983AE /* PBXTargetDependency */,
+			);
+			name = gGymUITests;
+			productName = gGymUITests;
+			productReference = A15289E12261DBE5008983AE /* gGymUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A15289BA2261DBE5008983AE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Jose Enrique Álvarez";
+				TargetAttributes = {
+					A15289C12261DBE5008983AE = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = "Jose Enrique Álvarez Rendal";
+						LastSwiftMigration = 1020;
+						ProvisioningStyle = Automatic;
+					};
+					A15289D52261DBE5008983AE = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = "Jose Enrique Álvarez Rendal";
+						LastSwiftMigration = 1020;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A15289C12261DBE5008983AE;
+					};
+					A15289E02261DBE5008983AE = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = "Jose Enrique Álvarez Rendal";
+						LastSwiftMigration = 1020;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A15289C12261DBE5008983AE;
+					};
+				};
+			};
+			buildConfigurationList = A15289BD2261DBE5008983AE /* Build configuration list for PBXProject "gGym" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				en,
+				Base,
+			);
+			mainGroup = A15289B92261DBE5008983AE;
+			productRefGroup = A15289C32261DBE5008983AE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A15289C12261DBE5008983AE /* gGym */,
+				A15289D52261DBE5008983AE /* gGymTests */,
+				A15289E02261DBE5008983AE /* gGymUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A15289C02261DBE5008983AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A15289D02261DBE5008983AE /* LaunchScreen.storyboard in Resources */,
+				A15289CD2261DBE5008983AE /* Assets.xcassets in Resources */,
+				A15289CB2261DBE5008983AE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A15289D42261DBE5008983AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A15289DF2261DBE5008983AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A15289BE2261DBE5008983AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A14F876C227B0703004CC699 /* EquipmentsService.swift in Sources */,
+				A13C156522688A0200594668 /* FormValidator.swift in Sources */,
+				A15289FC2261ED55008983AE /* Credentials.swift in Sources */,
+				A1254D00226C971B00984EC8 /* ClientsService.swift in Sources */,
+				A1254CFA226C8E9100984EC8 /* ClientsListController.swift in Sources */,
+				A1AC3D27227B679B00509A44 /* ReservationViewController.swift in Sources */,
+				A13C156722688C3D00594668 /* DialogHelper.swift in Sources */,
+				A16952872262673200F5F377 /* UserAccountCreationViewController.swift in Sources */,
+				A14F876A227B065E004CC699 /* Equipment.swift in Sources */,
+				A15289C82261DBE5008983AE /* LoginViewController.swift in Sources */,
+				A14F8768227B0613004CC699 /* EquipmentListViewController.swift in Sources */,
+				A1DE0C27226E366B00CB7D66 /* PaymentDetailsViewController.swift in Sources */,
+				A1695285226251E100F5F377 /* MainMenuViewController.swift in Sources */,
+				A1AC3D29227B79E600509A44 /* ReservationService.swift in Sources */,
+				A19266CE2269034F004E80A3 /* CenterService.swift in Sources */,
+				A1254CFC226C946C00984EC8 /* Client.swift in Sources */,
+				A15289FE2261EE2D008983AE /* CredentialsService.swift in Sources */,
+				A11CA213227461FD0022F54A /* ReceiptsService.swift in Sources */,
+				A11CA21522747D990022F54A /* DateSelectionPopupController.swift in Sources */,
+				A19266CC2268F990004E80A3 /* UsuariosService.swift in Sources */,
+				A15289C62261DBE5008983AE /* AppDelegate.swift in Sources */,
+				A1254D02226CC42600984EC8 /* ClientDetailsController.swift in Sources */,
+				A1DE0C23226E232800CB7D66 /* PaymentsService.swift in Sources */,
+				A1DE0C25226E26E800CB7D66 /* PaymentsViewController.swift in Sources */,
+				A19266C82268F573004E80A3 /* User.swift in Sources */,
+				A1AC3D25227B5A0500509A44 /* Reservation.swift in Sources */,
+				A11CA2112274615E0022F54A /* Receipt.swift in Sources */,
+				A14F876E227B1357004CC699 /* EquipmentDetailsViewController.swift in Sources */,
+				A1528A012261EFCD008983AE /* Costants.swift in Sources */,
+				A1DE0C21226E22A800CB7D66 /* Payment.swift in Sources */,
+				A19266D0226903E3004E80A3 /* Center.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A15289D22261DBE5008983AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A18F162A227CB19E004AC737 /* CentersServiceTest.swift in Sources */,
+				A18F1623227CA7E8004AC737 /* CredentialsTest.swift in Sources */,
+				A18F1632227CBE6A004AC737 /* EquipmentsServiceTest.swift in Sources */,
+				A18F162C227CB389004AC737 /* ClientsServiceTest.swift in Sources */,
+				A18F1626227CAD9B004AC737 /* CredentialsServiceTest.swift in Sources */,
+				A18F162E227CB961004AC737 /* PaymentsServiceTest.swift in Sources */,
+				A18F1628227CB0D1004AC737 /* UsuariosServiceTest.swift in Sources */,
+				A18F1630227CBC9E004AC737 /* ReceiptsServiceTest.swift in Sources */,
+				A18F1634227CBF9F004AC737 /* ReservationServiceTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A15289DD2261DBE5008983AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1CE2E9C227E0D2B0072B9EB /* PaymentsTest.swift in Sources */,
+				A1CBF833227DC5A7001CA8AF /* UserAccountCreationTest.swift in Sources */,
+				A1CBF82F227DB0B7001CA8AF /* LoginTest.swift in Sources */,
+				A1CE2E98227E0A330072B9EB /* ClientsTest.swift in Sources */,
+				A1CE2E96227E03BE0072B9EB /* EquipmentTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A15289D82261DBE5008983AE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A15289C12261DBE5008983AE /* gGym */;
+			targetProxy = A15289D72261DBE5008983AE /* PBXContainerItemProxy */;
+		};
+		A15289E32261DBE5008983AE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A15289C12261DBE5008983AE /* gGym */;
+			targetProxy = A15289E22261DBE5008983AE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A15289C92261DBE5008983AE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A15289CA2261DBE5008983AE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A15289CE2261DBE5008983AE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A15289CF2261DBE5008983AE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A15289E82261DBE6008983AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "Jose Enrique Álvarez Rendal";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A15289E92261DBE6008983AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "Jose Enrique Álvarez Rendal";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A15289EB2261DBE6008983AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = gGym/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.uoc.edu.gGym;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A15289EC2261DBE6008983AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = gGym/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.uoc.edu.gGym;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		A15289EE2261DBE6008983AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = gGymTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.uoc.edu.gGymTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/gGym.app/gGym";
+			};
+			name = Debug;
+		};
+		A15289EF2261DBE6008983AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = gGymTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.uoc.edu.gGymTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/gGym.app/gGym";
+			};
+			name = Release;
+		};
+		A15289F12261DBE6008983AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = gGymUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.uoc.edu.gGymUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = gGym;
+			};
+			name = Debug;
+		};
+		A15289F22261DBE6008983AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = gGymUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.uoc.edu.gGymUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = gGym;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A15289BD2261DBE5008983AE /* Build configuration list for PBXProject "gGym" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A15289E82261DBE6008983AE /* Debug */,
+				A15289E92261DBE6008983AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A15289EA2261DBE6008983AE /* Build configuration list for PBXNativeTarget "gGym" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A15289EB2261DBE6008983AE /* Debug */,
+				A15289EC2261DBE6008983AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A15289ED2261DBE6008983AE /* Build configuration list for PBXNativeTarget "gGymTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A15289EE2261DBE6008983AE /* Debug */,
+				A15289EF2261DBE6008983AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A15289F02261DBE6008983AE /* Build configuration list for PBXNativeTarget "gGymUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A15289F12261DBE6008983AE /* Debug */,
+				A15289F22261DBE6008983AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A15289BA2261DBE5008983AE /* Project object */;
+}
